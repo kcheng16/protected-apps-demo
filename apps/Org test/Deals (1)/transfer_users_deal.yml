@@ -1,0 +1,40 @@
+id: transfer_users_deal
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Transfer Users
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: transfer_users_to_deal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: '{{transfer_users_to_deal.isFetching}}'
+    - loaderPosition: auto
+    - disabled: '{{transfer_from_deal.value == '''' || transfer_to_deal.value == ''''}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: transfer_user_modal
+    row: 3.8
+    col: 6
+    height: 1
+    width: 6
+createdAt: 2022-01-19T15:01:00.707Z

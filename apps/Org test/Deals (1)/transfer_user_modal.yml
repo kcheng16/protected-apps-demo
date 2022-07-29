@@ -1,0 +1,39 @@
+id: transfer_user_modal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: open
+            - type: datasource
+            - method: trigger
+            - pluginId: get_transfer_progress
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: 'true'
+    - buttonText: Transfer Users to Deal 🔀
+style:
+  ordered: []
+position2:
+  position2:
+    subcontainer: header
+    col: 7
+    height: 1
+    width: 3
+createdAt: 2022-01-19T14:06:26.079Z

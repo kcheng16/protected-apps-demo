@@ -1,0 +1,116 @@
+id: eversign_trigger
+type: datasource
+subtype: RESTQuery
+resourceName: 63a3b88b-1459-487a-a71a-d241900aef77
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: >-
+        [{"key":"sandbox","value":"{{sandbox_value}}"},{"key":"template_id","value":"{{template_id}}"},{"key":"title","value":"{{document_title}}"},{"key":"message","value":"{{document_message}}"},{"key":"custom_requester_name","value":"{{requestor_name}}"},{"key":"custom_requester_email","value":"{{requestor_email}}"},{"key":"redirect","value":"{{redirect}}"},{"key":"redirect_decline","value":"{{redirect_decline}}"},{"key":"client","value":"withu_admin"},{"key":"signers","value":"{{signers}}"},{"key":"fields","value":"{{fields}}"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: document
+    - playgroundQueryUuid: 2641986d-8bc1-4866-a66a-f0d6f2e5b73c
+    - playgroundQueryId: 10
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - retoolVersion: 2.78.12
+    - importedQueryInputs:
+        ordered:
+          - template_id: e43f86e26268416a862ecb7b984ad19e
+          - document_message: >-
+              In order to share data from your users in the WithU application,
+              please review and sign the enclosed DPA. 
+          - signers: "[{\n\t\t\"role\": \"WithU \",\n\t\t\"name\": \"Edward Hewett\",\n\t\t\"email\": \"ed@withutraining.com\",\n\t\t\"message\": \"Please sign DPA for {{deal_list.selectedRow.data.name}} deal requested by {{current_user.fullName}}\",\n\t\t\"language\": \"en\"\n\t}, {\n\t\t\"role\": \"Client\",\n\t\t\"name\": \"{{signatory_name_value.value}}\",\n\t\t\"email\": \"{{signatory_email.value}}\",\n\t\t\"language\": \"en\"\n\t}]\n"
+          - requestor_email: '{{current_user.email}}'
+          - redirect_decline: ''
+          - document_title: WithU DPA
+          - requestor_name: '{{current_user.fullName}}'
+          - sandbox_value: '{{sandbox_check.value}}'
+          - fields: "[{\n\t\t\"identifier\": \"company-name_n7v7DSqI3ukQAW\",\n\t\t\"value\": \"{{company_name_value.value}}\"\n\t}, {\n\t\t\"identifier\": \"company-address_r9fItAYXdqxmrS\",\n\t\t\"value\": \"{{company_address_value.value}}\"\n\t},\n  {\n\t\t\"identifier\": \"company-name_nb0QVcUFgWjMQF\",\n\t\t\"value\": \"{{company_name_value.value}}\"\n\t},\n    {\n\t\t\"identifier\": \"data-to-share_4TKk787nsHPuF5\",\n\t\t\"value\": \"{{data_permisions_final_value.value}}\"\n\t}]"
+          - redirect: ''
+    - isImported: true
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: update_auto_dpa
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{eversign_trigger.data.embedded === 0}}'
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: Eversign is not working
+                        - description: Please contact Ed
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{eversign_trigger.data.embedded != 0}}'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-11-05T12:18:11.650Z
+folder: Data_Sharing

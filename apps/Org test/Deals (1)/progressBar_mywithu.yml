@@ -1,0 +1,29 @@
+id: progressBar_mywithu
+type: widget
+subtype: ProgressBarWidget
+template:
+  ordered:
+    - hideOutput: false
+    - hidden: '{{mywithu_logo_upload.isFetching === false}}'
+    - showInEditor: false
+    - _defaultValue: 0
+    - tooltipText: ''
+    - labelAlign: left
+    - value: 60
+    - labelCaption: ''
+    - labelWidth: '33'
+    - label: ''
+    - labelWidthUnit: '%'
+    - indeterminate: true
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 1
+    height: 0.4
+    width: 7
+createdAt: 2021-11-04T05:42:26.785Z

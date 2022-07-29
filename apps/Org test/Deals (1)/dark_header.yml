@@ -1,0 +1,35 @@
+id: dark_header
+type: widget
+subtype: SwitchWidget2
+template:
+  ordered:
+    - hidden: '{{!custom_redemption_page.value}}'
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: false
+    - labelCaption: ''
+    - label: '{{dark_header.value ? ''Light Header'' : ''Dark Header''}}'
+    - _validate: false
+    - invalid: false
+    - events:
+        ordered: []
+    - disabled: false
+    - labelPosition: right
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 11.799999999999999
+    height: 0.6
+    width: 3
+createdAt: 2022-04-28T09:07:55.219Z

@@ -1,0 +1,9 @@
+id: InAppLocalisedData
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: "var locale = {{in_app_drop_down.value}}\nvar in_app_data = {{deal_list.selectedRow.data.login}}\nvar\tin_app_localised_data = in_app_data[locale]\n\nif(in_app_localised_data == undefined){\n  in_app_localised_data = {\n            \"subtitle\": \"\",\n            \"cta\": \"\",\n            \"title\": \"\"\n        };\n}\n\nreturn in_app_localised_data"
+    - value: ''
+createdAt: 2022-01-11T13:38:49.032Z
+folder: in_app

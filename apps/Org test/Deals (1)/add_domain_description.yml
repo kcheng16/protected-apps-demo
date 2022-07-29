@@ -1,0 +1,27 @@
+id: add_domain_description
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: Add new domain
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 0.2
+    height: 0.6
+    width: 5
+    tabNum: 1
+createdAt: 2021-08-18T11:55:56.419Z

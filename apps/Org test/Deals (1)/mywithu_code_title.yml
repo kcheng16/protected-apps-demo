@@ -1,0 +1,50 @@
+id: mywithu_code_title
+type: widget
+subtype: TextAreaWidget
+template:
+  ordered:
+    - spellCheck: true
+    - readOnly: false
+    - autoResize: true
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: '100'
+    - hidden: '{{!custom_redemption_page.value}}'
+    - customValidation: ''
+    - hideValidationMessage: false
+    - minLines: 2
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{MyWithULocalisedData.value.redeem.textbox_title}}'
+    - labelCaption: ''
+    - labelWidth: '40'
+    - autoFill: ''
+    - placeholder: Redeem code
+    - label: Code Textbox Title
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - minLength: null
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - maxLines: null
+    - loading: false
+    - disabled: false
+    - labelPosition: top
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 7
+    height: 1
+    width: 4
+createdAt: 2022-05-03T11:13:21.541Z

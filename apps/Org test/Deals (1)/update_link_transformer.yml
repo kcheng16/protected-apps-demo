@@ -1,0 +1,31 @@
+id: update_link_transformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        let links = {{current_deal_links.value}}
+
+        let data={{deal_list.selectedRow.data}}
+
+        var arr=[]
+
+        if (data.links) {
+          arr=data.links
+        }
+
+        let index = arr.findIndex((i) => i == links);
+
+        if(index > -1){
+          arr.splice(index, 1, {{edit_branch_link.data.data['+url']}})
+        }
+
+        return arr
+    - value: ''
+createdAt: 2021-11-10T12:16:31.496Z
+folder: Links

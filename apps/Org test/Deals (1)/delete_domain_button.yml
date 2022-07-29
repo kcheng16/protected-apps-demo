@@ -1,0 +1,42 @@
+id: delete_domain_button
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: ''
+    - hidden: false
+    - text: Delete selected domain
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: delete
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: delete_domain_buttonClickHandler
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{list_of_domains.value != undefined}}'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: '{{list_of_domains.value == null}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 3.8
+    col: 5
+    height: 1
+    width: 7
+    tabNum: 1
+createdAt: 2021-08-17T21:33:15.000Z

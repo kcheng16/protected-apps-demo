@@ -1,0 +1,39 @@
+id: dpa_upload_container
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: fixed
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: false
+    - submitDisabled: ''
+    - submitButtonText: Upload DPA
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: upload_manual_dpa
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - hideSubmit: false
+    - loading: '{{upload_manual_dpa.isFetching || update_manual_dpa.isFetching}}'
+    - overflowType: hidden
+    - disabled: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: upload_existing_dpa
+    height: 9.799999999999999
+    width: 12
+createdAt: 2021-10-03T14:06:18.939Z

@@ -1,0 +1,29 @@
+id: datasharing_description
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: >-
+        This form allows a custom data sharing agreement to but put in place,
+        allowing us to share data back with relevant clients. 
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 1
+    height: 0.6
+    width: 12
+    tabNum: 8
+createdAt: 2021-09-13T14:34:39.639Z

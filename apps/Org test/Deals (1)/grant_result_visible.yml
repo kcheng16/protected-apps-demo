@@ -1,0 +1,8 @@
+id: grant_result_visible
+type: state
+subtype: State
+template:
+  ordered:
+    - value: 'false'
+createdAt: 2021-12-22T11:50:54.459Z
+folder: Temporary state

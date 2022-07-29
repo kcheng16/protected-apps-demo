@@ -1,0 +1,14 @@
+id: coupons_value
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{retoolContext.environment == "staging"  }}) {
+          return [{"percent": 0, id: ""},{"percent": 25, id: "uVkja8vr"},{"percent": 50, id:"xpKvFfrn"}] ;
+        } else  {
+          return [{"percent": 0, id: ""},{"percent": 25, id: "0HiKsINB"},{"percent": 50, id:"Dn7aqYLy"}]
+        }
+    - value: ''
+createdAt: 2021-11-08T11:48:27.585Z
+folder: Offer

@@ -1,0 +1,111 @@
+id: transfer_from_deal
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - inputValue: ''
+    - hidden: false
+    - customValidation: ''
+    - data: '{{deal_list.data.map((e) => e._id)}}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - _defaultValue: null
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: ''
+    - hiddenByIndex:
+        array: []
+    - allowSearch: true
+    - labelCaption: ''
+    - labelWidth: '15'
+    - deprecatedLabels: '{{deal_list.data.map((e) => e.name)}}'
+    - _hiddenByIndex: []
+    - placeholder: Select an option
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: From
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_transfer_progress
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: change
+            - type: widget
+            - method: setValue
+            - pluginId: show_log
+            - params:
+                ordered:
+                  - value: 'false'
+            - waitType: debounce
+            - waitMs: '0'
+    - _ids: []
+    - emptyMessage: ''
+    - overlayMaxHeight: null
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ self.deprecatedLabels[i] }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: transfer_user_modal
+    row: 1
+    height: 1
+    width: 12
+createdAt: 2022-01-19T16:52:36.295Z

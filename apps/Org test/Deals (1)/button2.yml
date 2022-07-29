@@ -1,0 +1,48 @@
+id: button2
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Revoke Entitlements
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: revokeEntitlements
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: revokeEntitlementsModal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: ''
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: revokeEntitlementsModal
+    row: 2.4
+    height: 1
+    width: 12
+createdAt: 2021-12-22T12:04:01.480Z

@@ -1,0 +1,55 @@
+id: link_medium
+type: widget
+subtype: TextInputWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - iconAfter: ''
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - patternType: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - showClear: true
+    - pattern: ''
+    - tooltipText: Used to identify a medium such as email or cost-per-click.
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{branchlist.data.data.feature}}'
+    - labelCaption: ''
+    - labelWidth: '40'
+    - autoFill: ''
+    - placeholder: SMS Campaign
+    - label: Medium
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: Used to identify a medium such as email or cost-per-click.
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    row: 7
+    height: 1
+    width: 12
+createdAt: 2021-08-18T08:37:13.386Z

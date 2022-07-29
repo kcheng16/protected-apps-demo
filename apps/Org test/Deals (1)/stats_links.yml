@@ -1,0 +1,15 @@
+id: stats_links
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        if ({{deal_list.selectedRow.data.links === undefined ||
+        deal_list.selectedRow.data.links.length === 0}}) {
+          return "no links found";
+        } else { ({{deal_list.selectedRow.data.links.length > 0}}) {
+          return {{deal_list.selectedRow.data.links.join("', '")}};
+        }
+    - value: ''
+createdAt: 2021-11-07T13:28:31.820Z
+folder: Stats

@@ -1,0 +1,50 @@
+id: my_withu_title
+type: widget
+subtype: TextAreaWidget
+template:
+  ordered:
+    - spellCheck: true
+    - readOnly: false
+    - autoResize: true
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: '100'
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - minLines: 2
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{MyWithULocalisedData.value.deal.title}}'
+    - labelCaption: ''
+    - labelWidth: '40'
+    - autoFill: ''
+    - placeholder: You’ve qualified for <subscription length> subscription to WithU!
+    - label: Title
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - minLength: null
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - maxLines: null
+    - loading: false
+    - disabled: false
+    - labelPosition: top
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 2.2
+    height: 1
+    width: 4
+createdAt: 2021-08-18T10:20:39.570Z

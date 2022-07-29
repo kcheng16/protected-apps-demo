@@ -1,0 +1,41 @@
+id: delete_code
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: ''
+    - hidden: false
+    - text: Delete selected code
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: delete_code_trigger
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: '{{list_codes_deal.selectedRow.data === undefined}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 9
+    col: 3
+    height: 1
+    width: 3
+    tabNum: 5
+createdAt: 2021-08-18T14:37:34.595Z

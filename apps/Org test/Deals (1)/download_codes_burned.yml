@@ -1,0 +1,93 @@
+id: download_codes_burned
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - inputValue: ''
+    - hidden: false
+    - customValidation: ''
+    - data: '[null, true, false]'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - _defaultValue: null
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: 'null'
+    - hiddenByIndex:
+        array: []
+    - allowSearch: true
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels: ''
+    - _hiddenByIndex: []
+    - placeholder: Select an option
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: Burned
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: ''
+    - overlayMaxHeight: null
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ [''All'', ''True'', ''False''][i] }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: download_modal
+    row: 2.2
+    height: 1
+    width: 12
+createdAt: 2022-01-19T13:31:13.594Z

@@ -1,0 +1,41 @@
+id: search_deals_btn
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: search
+    - submitTargetId: null
+    - hidden: false
+    - text: Search
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - method: trigger
+            - enabled: ''
+            - params:
+                ordered: []
+            - targetId: null
+            - pluginId: list_deals_by_name
+            - waitType: debounce
+            - event: click
+            - type: datasource
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 1
+    col: 5
+    height: 1
+    width: 2
+createdAt: 2022-02-28T13:30:09.233Z

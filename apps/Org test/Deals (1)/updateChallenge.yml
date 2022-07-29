@@ -1,0 +1,149 @@
+id: updateChallenge
+type: datasource
+subtype: FirebaseQuery
+resourceName: 0d4ce929-fb5a-4163-98b4-f83d95b31c4f
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - privateParams: []
+    - firestoreCollection: challenges
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - endAt: ''
+    - firebaseService: firestore
+    - showSuccessToaster: false
+    - equalTo: ''
+    - cacheKeyTtl: ''
+    - metadata: null
+    - uid: ''
+    - editorMode: gui
+    - actionType: updateFirestore
+    - changesetObject: ''
+    - setDbValue: ''
+    - value: >-
+        {
+
+        "title": "{{challenge_title.value}}",
+
+        "body": "{{challenge_body.value}}",
+
+        "logo": "{{uploadChallengeLogo.data != null ?
+        uploadChallengeLogo.data.signedUrl.split("?")['0'].toString() :
+        deal_challenges.selectedItem.logo || ""}}",
+
+        "profile_text": "{{challenge_profile.value}}",
+
+        "badge_title": "{{challenge_badge.value}}",
+
+        "gradient_start": "{{challenge_gradient_start.value}}",
+
+        "gradient_end": "{{challenge_gradient_end.value}}",
+
+        "start_at": "{{challenge_start.value}}",
+
+        "end_at": "{{challenge_end.value}}",
+
+        "goal": {{parseInt(challenge_goal.value)}},
+
+        "type": "{{challenge_type.value}}",
+
+        "frequency": "{{challenge_frequency.value}}",
+
+        "active": {{challenge_active.value}},
+
+        }
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - filterType: ''
+    - rawData: null
+    - userOptions: ''
+    - docId: '{{deal_challenges.selectedItem._id}}'
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - ordering: ''
+    - startAt: ''
+    - limitType: ''
+    - showLatestVersionUpdatedWarning: false
+    - dbRef: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - phoneNumber: ''
+    - nextPageToken: ''
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: getChallengesForDeal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: Challenge Updated 🥳
+                        - description: Your challenge was updated successfully.
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - useRawCollectionId: true
+    - firestoreOrderBy: ''
+    - requireConfirmation: false
+    - orderByChildValue: ''
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - limit: ''
+    - enableCaching: false
+    - firestoreOrderDirection: ''
+    - allowedGroups: []
+    - firestoreWhere: ''
+    - email: ''
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2022-06-09T18:02:11.849Z
+folder: Challenges

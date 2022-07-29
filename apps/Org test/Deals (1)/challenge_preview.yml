@@ -1,0 +1,48 @@
+id: challenge_preview
+type: widget
+subtype: HTMLWidget
+template:
+  ordered:
+    - hidden: false
+    - maintainSpaceWhenHidden: false
+    - showInEditor: false
+    - tooltipText: ''
+    - css: |-
+        .myClass {
+          text-align: center;
+        }
+    - html: |-
+        <div
+            style="
+              height: 250px;
+              width: 360px;
+              background-image: linear-gradient(to right, #{{challenge_gradient_end.value}}, #{{challenge_gradient_start.value}});
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding-left: 30px;
+              padding-right: 30px;
+              color: white;
+            "
+          >
+          
+          <div style="width: 40%; margin-bottom: 15px;"><img src={{challenge_logo.placeholder === "" ? deal_challenges.selectedItem.logo : challenge_logo.placeholder}}></img></div>
+          <span style="font-size: 20px; font-weight: 600;">CHALLENGE</span>
+          <div style="height: 20px"></div>
+          <span style="text-align:center; font-size: 14px;">{{challenge_body.value}}</span>
+          <div style="height: 30px"></div>
+          <div style="display: flex; flex-direction:row; justify-content: space-between; align-items: center; width: 70%;">
+            <div style="height: 35px; width:120px; background-color: #00FFC4; border-radius: 30px; display: flex; justify-content: center; align-items: center; color: #0D002D; font-weight: 600; font-size: 14px;">Join Now</div>
+            <span style="font-size: 14px;">54 already joined</span>
+        </div>
+        </div>
+style:
+  ordered: []
+position2:
+  position2:
+    container: challenge_form
+    col: 6
+    height: 0.2
+    width: 6
+createdAt: 2022-06-09T18:26:02.438Z

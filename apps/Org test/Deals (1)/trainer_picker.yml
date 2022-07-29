@@ -1,0 +1,93 @@
+id: trainer_picker
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: false
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - inputValue: ''
+    - hidden: '{{deeplink_to.value != "trainer"}}'
+    - customValidation: ''
+    - data: '{{trainers_list.data.map((i) => i.id)}}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: null
+    - _defaultValue: null
+    - showClear: true
+    - tooltipText: ''
+    - labelAlign: right
+    - formDataKey: '{{ self.id }}'
+    - value: '{{branchlist.data.data.nav_to.split(''/'')[1]}}'
+    - hiddenByIndex:
+        array: []
+    - allowSearch: true
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels: '{{trainers_list.data.map((i) => i.name)}}'
+    - _hiddenByIndex: []
+    - placeholder: Select a trainer
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: 'Trainer '
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: ''
+    - overlayMaxHeight: 250
+    - loading: false
+    - disabled: '{{deeplink_to.value != "trainer"}}'
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: true
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: null
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ self.deprecatedLabels[i] }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    row: 12.800000000000006
+    height: 1
+    width: 12
+createdAt: 2021-09-11T09:30:19.417Z

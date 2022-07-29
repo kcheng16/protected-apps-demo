@@ -1,0 +1,44 @@
+id: add_new_domain_form
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: fixed
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: true
+    - submitDisabled: ''
+    - submitButtonText: Add new domain
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: check_if_domain_attached
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: ''
+    - hideSubmit: false
+    - loading: >-
+        {{add_new_domain_formSubmitHandler.isFetching ||
+        check_if_domain_attached.isFetching}}
+    - overflowType: hidden
+    - disabled: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 1
+    height: 3.8000000000000003
+    width: 5
+    tabNum: 1
+createdAt: 2021-08-18T11:48:34.388Z

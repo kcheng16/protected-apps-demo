@@ -1,0 +1,94 @@
+id: current_deal_links
+type: widget
+subtype: ListboxWidget
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - _iconByIndex: []
+    - allowDeselect: true
+    - hidden: false
+    - customValidation: ''
+    - data: '{{deal_list.selectedRow.data.links}}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - showInEditor: false
+    - _defaultValue: null
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: ''
+    - hiddenByIndex:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels: ''
+    - _hiddenByIndex: []
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - searchTerm: ''
+    - label: Current deal links
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: branchlist
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: >-
+                {{current_deal_links.value !== null && current_deal_links.value
+                !== undefined}}
+    - _ids: []
+    - emptyMessage: This deal has no links
+    - disabled: false
+    - labelPosition: top
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    height: 7.400000000000001
+    width: 4
+    tabNum: 2
+createdAt: 2021-08-18T09:55:17.288Z

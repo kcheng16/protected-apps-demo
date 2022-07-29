@@ -1,0 +1,21 @@
+id: code_column
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let csv = {{csv_upload.parsedValue[0]}};
+        let columns = [];
+
+        for(const row of csv) {
+          const keys = Object.keys(row);
+          
+          for(const key of keys) {
+            if(!columns.includes(key)) columns.push(key);
+          }
+        }
+
+        return columns;
+    - value: ''
+createdAt: 2022-01-11T13:36:10.429Z
+folder: Codes

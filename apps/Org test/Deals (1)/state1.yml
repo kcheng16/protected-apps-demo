@@ -1,0 +1,8 @@
+id: state1
+type: state
+subtype: State
+template:
+  ordered:
+    - value: null
+createdAt: 2022-01-12T09:20:08.282Z
+folder: Temporary state

@@ -1,0 +1,77 @@
+id: burnable_control
+type: widget
+subtype: SegmentedControlWidget
+template:
+  ordered:
+    - _disabledByIndex: []
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - _iconByIndex: []
+    - hidden: false
+    - customValidation: ''
+    - data: '[true, false]'
+    - hideValidationMessage: false
+    - selectedItem: null
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: null
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: 'true'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels: ''
+    - label: Single use
+    - _hasMigratedNestedItems: true
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - invalid: false
+    - selectedIndex: null
+    - selectedLabel: ''
+    - events:
+        - ordered:
+            - event: change
+            - type: widget
+            - method: clearValue
+            - pluginId: custom_code
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{burnable_control.value === true}}'
+        - ordered:
+            - event: change
+            - type: widget
+            - method: setValue
+            - pluginId: custom_code
+            - params:
+                ordered:
+                  - value: 'true'
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{burnable_control.value  === false}}'
+    - _ids: []
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex: []
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: false
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - required: false
+    - labels: '{{ [''Yes'', ''No''][i] }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: create_codes
+    height: 0.8
+    width: 12
+createdAt: 2021-08-18T14:36:26.663Z

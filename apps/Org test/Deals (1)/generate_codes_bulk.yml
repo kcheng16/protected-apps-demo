@@ -1,0 +1,92 @@
+id: generate_codes_bulk
+type: datasource
+subtype: RESTQuery
+resourceName: a683f079-6b4c-425c-b4ef-45fe6076b5c6
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: >-
+        [{"key":"deal_id","value":"{{dealID}}"},{"key":"burn","value":"{{burn}}"},{"key":"codes_required","value":"{{codesRequired}}"},{"key":"code_length","value":"{{codesLength}}"},{"key":"batch_name","value":"{{batchName}}"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: 329
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: false
+    - paginationEnabled: false
+    - query: generateCodes
+    - playgroundQueryUuid: 03335d38-a181-4caa-a433-ab11d1b6bd96
+    - playgroundQueryId: 49
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered:
+          - dealID: '{{deal_list.selectedRow.data._id}}'
+          - burn: '{{burnable_control.value}}'
+          - codesRequired: '{{number_codes.value}}'
+          - codesLength: '{{length_of_codes.value}}'
+          - batchName: '{{batch_name.value}}"'
+    - isImported: true
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '200'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_codes_count
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '120000'
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2022-01-04T16:08:47.048Z
+folder: Codes

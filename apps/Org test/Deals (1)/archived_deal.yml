@@ -1,0 +1,33 @@
+id: archived_deal
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{is_live.value === true}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: Archived deals
+    - type: warning
+    - exportFileName: ''
+    - description: >-
+        When deals are archived this will prevent new users from signing up
+        using the deal (Links will still work, but will not activate the deal's
+        benefits). Existing users will not be affected
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: deal_setup
+    row: 2.8
+    height: 2.8000000000000007
+    width: 12
+createdAt: 2021-09-22T11:41:44.275Z

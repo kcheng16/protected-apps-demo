@@ -1,0 +1,18 @@
+id: company_address_value
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >+
+        if ({{company_location.value === true}}) {
+          return {{legal_address.value}} ;
+        } 
+
+        else  {return {{company_address_no_uk.value}} +" "+
+        {{company_geo.value}}
+              }
+
+
+    - value: ''
+createdAt: 2021-11-07T11:09:59.063Z
+folder: Data_Sharing

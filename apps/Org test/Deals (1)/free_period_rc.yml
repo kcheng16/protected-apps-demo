@@ -1,0 +1,98 @@
+id: free_period_rc
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: false
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - inputValue: ''
+    - hidden: >-
+        {{deal_type_picker.value === 3 || deal_type_picker.value === 2 ||
+        free_period_toggle.value === false}}
+    - customValidation: ''
+    - data: >-
+        ["free_daily","free_weekly","free_monthly","free_two_month","free_three_month","free_six_month","free_yearly"]
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: null
+    - _defaultValue: null
+    - showClear: true
+    - tooltipText: ''
+    - labelAlign: right
+    - formDataKey: '{{ self.id }}'
+    - value: '{{deal_list.selectedRow.data.subscription.offering}}'
+    - hiddenByIndex:
+        array: []
+    - allowSearch: true
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels: ''
+    - _hiddenByIndex: []
+    - placeholder: Select a value
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: Free period duration
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: ''
+    - overlayMaxHeight: 250
+    - loading: false
+    - disabled: ''
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: true
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: null
+    - _imageByIndex: []
+    - required: false
+    - labels: >-
+        {{ ["One day","One week","One month","Two months","Three months","Six
+        months","One year"][i] }}
+style:
+  ordered: []
+position2:
+  position2:
+    container: web_offer
+    row: 12.8
+    height: 1
+    width: 12
+createdAt: 2021-09-13T21:54:32.684Z

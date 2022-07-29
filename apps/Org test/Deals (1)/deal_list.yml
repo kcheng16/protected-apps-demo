@@ -1,0 +1,470 @@
+id: deal_list
+type: widget
+subtype: TableWidget
+template:
+  ordered:
+    - showCustomButton: false
+    - sortMappedValue:
+        ordered: []
+    - _filteredSortedRenderedDataWithTypes: null
+    - heightType: fixed
+    - normalizedData: null
+    - saveChangesDisabled: ''
+    - columnTypeProperties:
+        ordered: []
+    - columnWidths: []
+    - showSummaryFooter: false
+    - disableRowSelectInteraction: false
+    - columnWidthsMobile: []
+    - hasNextAfterCursor: ''
+    - columnTypeSpecificExtras:
+        ordered: []
+    - onRowAdded: ''
+    - columnHeaderNames:
+        ordered:
+          - name: Deal name
+    - alwaysShowPaginator: false
+    - columnColors:
+        ordered:
+          - deal_owner: ''
+          - is_live: ''
+          - data_sharing: ''
+          - link_urls: ''
+          - login: ''
+          - data: ''
+          - logo: ''
+          - name: ''
+          - sales: ''
+          - name_lower: ''
+          - deal_id: ''
+          - domains: ''
+          - burn: ''
+          - __metadata: ''
+          - link_ids: ''
+          - web: ''
+          - dpa: ''
+          - title: ''
+          - links: ''
+          - _id: ''
+          - type: ''
+          - logo_url: ''
+          - id: ''
+          - crm_sync: ''
+          - email: ''
+          - subscription: ''
+          - crm: ''
+    - columnFrozenAlignments:
+        ordered: []
+    - allowMultiRowSelect: false
+    - columnFormats:
+        ordered: []
+    - columnRestrictedEditing:
+        ordered: []
+    - showFilterButton: false
+    - _columnVisibility:
+        ordered:
+          - deal_owner: false
+          - is_live: false
+          - data_sharing: false
+          - link_urls: false
+          - login: false
+          - data: true
+          - logo: false
+          - name: true
+          - sales: true
+          - name_lower: false
+          - deal_id: true
+          - domains: false
+          - burn: true
+          - __metadata: false
+          - link_ids: false
+          - web: false
+          - dpa: false
+          - title: false
+          - links: false
+          - _id: false
+          - type: false
+          - logo_url: false
+          - id: false
+          - crm_sync: false
+          - email: true
+          - subscription: false
+          - crm: false
+    - _columnSummaryTypes:
+        ordered: []
+    - _columnsWithLegacyBackgroundColor:
+        set: []
+    - showAddRowButton: false
+    - _unfilteredSelectedIndex: '{{list_all_deals.data}}'
+    - nextBeforeCursor: ''
+    - columnVisibility:
+        ordered:
+          - deal_owner: false
+          - is_live: false
+          - data_sharing: false
+          - link_urls: false
+          - login: false
+          - data: true
+          - logo: false
+          - name: true
+          - sales: true
+          - name_lower: false
+          - deal_id: true
+          - domains: false
+          - burn: true
+          - __metadata: false
+          - link_ids: false
+          - web: false
+          - dpa: false
+          - title: false
+          - links: false
+          - _id: false
+          - type: false
+          - logo_url: false
+          - id: false
+          - crm_sync: false
+          - email: true
+          - subscription: false
+          - crm: false
+    - selectedPageIndex: '0'
+    - applyDynamicSettingsToColumnOrder: false
+    - rowColor:
+        array: []
+    - actionButtonColumnName: Actions
+    - resetAfterSave: true
+    - filterStackType: and
+    - downloadRawData: false
+    - showFetchingIndicator: true
+    - serverPaginated: false
+    - data: '{{list_deals_by_name.data.data}}'
+    - displayedData: null
+    - actionButtons: []
+    - actionButtonSelectsRow: true
+    - selectRowByDefault: true
+    - defaultSortByColumn: ''
+    - paginationOffset: 0
+    - columnAlignment:
+        ordered: []
+    - columnSummaries:
+        object: {}
+    - sortedDesc: false
+    - customButtonName: ''
+    - columnMappersRenderAsHTML:
+        ordered: []
+    - showRefreshButton: true
+    - pageSize: 5
+    - useDynamicColumnSettings: false
+    - style:
+        ordered:
+          - headerBackground: rgb(30, 19, 62)
+          - headerText: rgb(255, 255, 255)
+          - toolbarBackground: rgb(255, 255, 255)
+    - actionButtonPosition: left
+    - dynamicRowHeights: false
+    - bulkUpdateAction: ''
+    - afterCursor: ''
+    - onCustomButtonPressQueryName: ''
+    - changeSet:
+        object: {}
+    - sortedColumn: ''
+    - _columnSummaryValues:
+        ordered: []
+    - checkboxRowSelect: true
+    - _compatibilityMode: true
+    - showColumnBorders: true
+    - clearSelectionLabel: Clear selection
+    - _renderedDataWithTypes: null
+    - columnAllowOverflow:
+        ordered: []
+    - beforeCursor: ''
+    - serverPaginationType: limitOffsetBased
+    - onRowSelect: ''
+    - showDownloadButton: false
+    - selectedIndex: null
+    - defaultSortDescending: false
+    - _sortedDisplayedDataIndices: null
+    - dynamicColumnSettings: null
+    - events:
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: offer_check
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: get_users
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: get_users
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: get_all_users
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: workouts
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: workouts
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: get_all_users
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: widget
+            - method: clearValue
+            - pluginId: current_deal_links
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: ''
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: widget
+            - method: clearValue
+            - pluginId: current_deal_links
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: ''
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: get_grant_progress
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: rowSelectChange
+            - type: datasource
+            - method: trigger
+            - pluginId: get_revoke_progress
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: saveChanges
+            - type: datasource
+            - method: trigger
+            - pluginId: get_deal_batch
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: saveChanges
+            - type: datasource
+            - method: trigger
+            - pluginId: JSONDataHandler
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: rowSelectChange
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      if(retoolContext.environment === 'production') {
+                        get_user_count_deal_prod.trigger();
+                      } else {
+                        get_user_count_deal_dev.trigger();
+                      }
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+    - totalRowCount: '{{get_codes_count.data.count}}'
+    - recordUpdates:
+        array: []
+    - newRow: null
+    - emptyMessage: No deals found {{gen_codes.data}}
+    - columnEditable:
+        ordered: []
+    - _viewerColumnSummaryTypes:
+        object: {}
+    - filters:
+        array: []
+    - displayedDataIndices: null
+    - disableSorting:
+        ordered: []
+    - columnMappers:
+        ordered:
+          - name: ''
+    - showClearSelection: false
+    - doubleClickToEdit: false
+    - overflowType: scroll
+    - _reverseSortedDisplayedDataIndices: null
+    - selectedCell:
+        object:
+          index: null
+          data: null
+          columnName: null
+    - columns:
+        - id
+        - name
+        - email
+        - sales
+        - logo
+        - subscription
+        - data_sharing
+        - type
+        - login
+        - link_ids
+        - domains
+        - web
+        - _id
+        - __metadata
+        - link_urls
+        - is_live
+        - deal_owner
+        - links
+        - dpa
+        - crm_sync
+        - crm
+        - logo_url
+        - deal_id
+        - burn
+        - title
+        - name_lower
+        - data
+    - defaultSelectedRow: index
+    - freezeActionButtonColumns: false
+    - sort: null
+    - _columns:
+        - id
+        - name
+        - email
+        - sales
+        - logo
+        - subscription
+        - data_sharing
+        - type
+        - login
+        - link_ids
+        - domains
+        - web
+        - _id
+        - __metadata
+        - link_urls
+        - is_live
+        - deal_owner
+        - links
+        - dpa
+        - crm_sync
+        - crm
+        - logo_url
+        - deal_id
+        - burn
+        - title
+        - name_lower
+        - data
+    - sortByRawValue:
+        ordered: []
+    - calculatedColumns: []
+    - selectedRow:
+        object:
+          index: null
+          data: null
+    - showPaginationOnTop: false
+    - _reverseDisplayedDataIndices: null
+    - nextAfterCursor: ''
+    - useCompactMode: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 1.999999999999999
+    height: 8.200000000000001
+    width: 7
+createdAt: 2021-08-17T21:06:27.448Z

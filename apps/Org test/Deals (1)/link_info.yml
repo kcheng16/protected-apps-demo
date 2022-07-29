@@ -1,0 +1,32 @@
+id: link_info
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{show_custom_dpa.value === false}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: Dynamic link
+    - type: info
+    - exportFileName: ''
+    - description: |-
+        Links can be inserted using {{link_value.data}}
+        Copy & URL destination are controlled using the below boxes
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: in_product_data_options
+    row: 2.4
+    height: 2
+    width: 12
+createdAt: 2021-11-07T09:59:15.862Z

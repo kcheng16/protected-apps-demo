@@ -1,0 +1,125 @@
+id: update_deal_metadata
+type: datasource
+subtype: FirebaseQuery
+resourceName: 0d4ce929-fb5a-4163-98b4-f83d95b31c4f
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - privateParams: []
+    - firestoreCollection: deals
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - endAt: ''
+    - firebaseService: firestore
+    - showSuccessToaster: false
+    - equalTo: ''
+    - cacheKeyTtl: ''
+    - metadata: null
+    - uid: ''
+    - editorMode: gui
+    - actionType: updateFirestore
+    - changesetObject: ''
+    - setDbValue: ''
+    - value: |-
+        {is_live: {{is_live.value}},
+        name: {{deal_name_input.value}},
+        type: {{deal_type_input.value}},
+        deal_owner: {{withu_owner.value}}
+        }
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - filterType: ''
+    - rawData: null
+    - userOptions: ''
+    - docId: '{{deal_list.selectedRow.data._id}}'
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - ordering: ''
+    - startAt: ''
+    - limitType: ''
+    - showLatestVersionUpdatedWarning: false
+    - dbRef: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - phoneNumber: ''
+    - nextPageToken: ''
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: Changes saved
+                        - description: >-
+                            Your changes to the
+                            {{deal_list.selectedRow.data.name}} deal have been
+                            saved
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: list_deals_by_name
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - useRawCollectionId: false
+    - firestoreOrderBy: ''
+    - requireConfirmation: false
+    - orderByChildValue: ''
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - limit: ''
+    - enableCaching: false
+    - firestoreOrderDirection: ''
+    - allowedGroups: []
+    - firestoreWhere: ''
+    - email: ''
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-09-25T11:35:20.398Z
+folder: deal_metadata

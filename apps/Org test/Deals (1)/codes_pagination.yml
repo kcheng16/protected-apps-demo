@@ -1,0 +1,8 @@
+id: codes_pagination
+type: state
+subtype: State
+template:
+  ordered:
+    - value: '[]'
+createdAt: 2021-12-22T16:01:10.097Z
+folder: Temporary state

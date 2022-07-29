@@ -1,0 +1,14 @@
+id: redemption_url
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{retoolContext.environment == "staging"  }}) {
+          return "https://my.dev.withutraining.com/redeem";
+        } 
+        else  {return "https://my.withutraining.com/redeem"
+              }
+    - value: ''
+createdAt: 2021-11-08T06:22:12.534Z
+folder: Codes

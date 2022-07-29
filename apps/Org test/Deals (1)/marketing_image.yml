@@ -1,0 +1,67 @@
+id: marketing_image
+type: widget
+subtype: FileInputWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - iconAfter: ''
+    - parseFiles: false
+    - maxSize: ''
+    - selectionType: single
+    - accept: '[''png'',''jpg'']'
+    - hidden: false
+    - customValidation: ''
+    - maxCount: null
+    - hideValidationMessage: false
+    - textBefore: Browse
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - parsing: false
+    - tooltipText: >-
+        Image shown when link is shared on Social media. If no image is provided
+        the WithU default image will display.
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '43.5'
+    - minSize: ''
+    - placeholder: '{{branchlist.data.data.$og_image_url.split(''/'')[4]}}'
+    - label: Marketing image
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: picture
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: upload_image
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{marketing_image.files[''0''] != null}}'
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - minCount: null
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    row: 3.9999999999999964
+    height: 1
+    width: 11
+createdAt: 2021-10-11T15:27:58.350Z

@@ -1,0 +1,15 @@
+id: stats_domains
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >
+        if ({{deal_list.selectedRow.data.domains === undefined ||
+        deal_list.selectedRow.data.domains.length === 0}}) {
+          return "no domains found";
+        } else {
+          return {{deal_list.selectedRow.data.domains.join("|")}};
+        }
+    - value: ''
+createdAt: 2021-11-07T15:21:52.654Z
+folder: Stats

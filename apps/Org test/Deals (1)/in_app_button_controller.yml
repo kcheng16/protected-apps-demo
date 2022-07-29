@@ -1,0 +1,14 @@
+id: in_app_button_controller
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{in_app_logo_query.isFetching == true  }}) {
+          return "⌛";
+        } 
+        else  {return "🗑️"
+              }
+    - value: ''
+createdAt: 2021-10-31T11:42:20.539Z
+folder: in_app

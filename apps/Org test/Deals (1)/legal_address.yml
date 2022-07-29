@@ -1,0 +1,60 @@
+id: legal_address
+type: widget
+subtype: TextInputWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: 'true'
+    - iconAfter: ''
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: null
+    - hidden: '{{company_location.value === false}}'
+    - customValidation: ''
+    - patternType: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - showClear: false
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: >-
+        {{company_address.data.registered_office_address.address_line_1}}
+        {{company_address.data.registered_office_address.address_line_2}}
+        {{company_address.data.registered_office_address.locality}}
+        {{company_address.data.registered_office_address.postal_code}}
+        {{company_address.data.registered_office_address.country}}
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: Company address
+    - label: Address
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - loading: false
+    - disabled: 'true'
+    - labelPosition: left
+    - labelWrap: true
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpa_template
+    row: 8.8
+    height: 1
+    width: 12
+createdAt: 2021-09-13T15:11:32.298Z

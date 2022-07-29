@@ -1,0 +1,32 @@
+id: CRM_warn
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{crm_sync_status.value === true }}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: Changes are applied instantly
+    - type: info
+    - exportFileName: ''
+    - description: >-
+        Any change made here could result in the imediate delivery of messages
+        to a user. Proceed with caution
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    height: 1.9999999999999996
+    width: 12
+    tabNum: 7
+createdAt: 2021-11-05T07:06:27.656Z

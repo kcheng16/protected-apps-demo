@@ -1,0 +1,47 @@
+id: number_of_users
+type: widget
+subtype: StatisticWidget2
+template:
+  ordered:
+    - positiveTrend: false
+    - signDisplay: auto
+    - secondaryCurrency: ''
+    - secondarySuffix: ''
+    - align: left
+    - secondaryPrefix: ''
+    - secondaryEnableTrend: false
+    - secondaryDecimalPlaces: null
+    - hidden: null
+    - showSeparators: false
+    - formattingStyle: decimal
+    - showInEditor: null
+    - secondaryPositiveTrend: false
+    - tooltipText: ''
+    - currency: ''
+    - value: '{{get_all_users?.data?.user_id?.length ?? 0}}'
+    - style:
+        ordered: []
+    - secondarySignDisplay: auto
+    - suffix: ''
+    - labelCaption: ''
+    - prefix: ''
+    - secondaryPadDecimal: false
+    - label: Total Users
+    - secondaryFormattingStyle: decimal
+    - icon: ''
+    - enableTrend: false
+    - secondaryValue: null
+    - decimalPlaces: '0'
+    - padDecimal: true
+    - maintainSpaceWhenHidden: null
+    - secondaryShowSeparators: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 1.2
+    height: 2
+    width: 2
+    tabNum: 6
+createdAt: 2021-08-31T22:08:59.764Z

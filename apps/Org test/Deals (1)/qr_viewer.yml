@@ -1,0 +1,27 @@
+id: qr_viewer
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: '{{current_deal_links.value == null}}'
+    - buttonText: View QR
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 8.4
+    height: 1
+    width: 2
+    tabNum: 2
+createdAt: 2021-09-25T15:39:44.089Z

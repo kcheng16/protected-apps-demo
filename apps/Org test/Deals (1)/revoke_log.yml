@@ -1,0 +1,32 @@
+id: revoke_log
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: ''
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - style:
+        ordered:
+          - accent-background: '#d4e7f7ff'
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: '{{get_revoke_progress.data.error != null}}'
+    - buttonText: View Last Log
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 2
+    col: 7
+    height: 1
+    width: 5
+    tabNum: 10
+createdAt: 2022-01-14T13:15:58.026Z

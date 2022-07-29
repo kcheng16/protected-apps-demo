@@ -1,0 +1,16 @@
+id: deal_debug
+type: widget
+subtype: JSONExplorerWidget
+template:
+  ordered:
+    - value: '{{deal_list.selectedRow.data}}'
+    - html: false
+    - expandNodes: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: view_debug
+    height: 10.4
+    width: 12
+createdAt: 2021-10-09T19:00:44.109Z

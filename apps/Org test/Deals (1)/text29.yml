@@ -1,0 +1,35 @@
+id: text29
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: '{{!show_log.value}}'
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: >-
+        Processed at:
+        {{moment(get_transfer_progress.data.data.created_at).format('DD/MM/YYYY,
+        HH:mm')}}
+
+        Succeeded: {{get_transfer_progress.data.data.completed}}
+
+        Failed: {{get_transfer_progress.data.data.failed}}
+
+        Total addressed: {{get_transfer_progress.data.data.total}}
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: transfer_user_modal
+    row: 6.2
+    height: 0.6
+    width: 12
+createdAt: 2022-01-19T17:01:52.666Z

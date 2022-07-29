@@ -1,0 +1,13 @@
+id: get_last_date
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        var myCurrentDate=new Date();
+        var myFutureDate=new Date(myCurrentDate);
+            myFutureDate.setDate(myFutureDate.getDate()- 30);//myFutureDate is now 8 days in the future
+        return myFutureDate
+    - value: ''
+createdAt: 2021-11-08T06:13:10.975Z
+folder: Stats

@@ -1,0 +1,45 @@
+id: link_editor
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: auto
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: false
+    - submitDisabled: >-
+        {{current_deal_links.value === null || current_deal_links.value ===
+        undefined || current_deal_links.value === ""}}
+    - submitButtonText: Save link
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: edit_branch_link
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - hideSubmit: false
+    - loading: '{{edit_branch_link.isFetching}}'
+    - overflowType: hidden
+    - disabled: >-
+        {{current_deal_links.value === null || current_deal_links.value ===
+        undefined || current_deal_links.value === ""}}
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    col: 4
+    height: 18.199999999999992
+    width: 8
+    tabNum: 2
+createdAt: 2021-08-18T08:34:54.757Z

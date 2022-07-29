@@ -1,0 +1,8 @@
+id: dealNameSearch
+type: state
+subtype: State
+template:
+  ordered:
+    - value: ''
+createdAt: 2022-02-28T13:33:39.421Z
+folder: Temporary state

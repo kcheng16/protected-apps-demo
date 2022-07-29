@@ -1,0 +1,56 @@
+id: in_app_logo_upload
+type: widget
+subtype: FileButtonWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - iconAfter: ''
+    - parseFiles: false
+    - maxSize: ''
+    - selectionType: single
+    - accept: '[''png'']'
+    - hidden: false
+    - customValidation: ''
+    - maxCount: null
+    - hideValidationMessage: false
+    - text: Browse
+    - validationMessage: ''
+    - showInEditor: false
+    - parsing: false
+    - tooltipText: ''
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - minSize: ''
+    - styleVariant: outline
+    - _validate: false
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: bold/image-picture-gallery
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: in_app_logo_query
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: '{{in_app_logo_query.isFetching}}'
+    - loaderPosition: auto
+    - disabled: false
+    - minCount: null
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: in_app_form
+    row: 5.1999999999999975
+    height: 1
+    width: 2
+createdAt: 2021-10-31T11:31:01.344Z

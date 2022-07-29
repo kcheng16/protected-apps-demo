@@ -1,0 +1,128 @@
+id: branchlist
+type: datasource
+subtype: RESTQuery
+resourceName: 01827325-dc29-4d1c-af32-3d8ca135eb06
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: url/?url={{branch_url}}
+    - playgroundQueryUuid: 67dc6978-fbee-4428-a710-d671fbcb6fe9
+    - playgroundQueryId: 3
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - retoolVersion: 2.78.12
+    - importedQueryInputs:
+        ordered:
+          - branch_url: '{{current_deal_links.value}}'
+    - isImported: true
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: workout_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{branchlist.data.data.nav_to.includes("workout")}}'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: trainers_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{branchlist.data.data.nav_to.includes("trainer")}}'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: collection_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{branchlist.data.data.nav_to.includes("collection")}}'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: programme_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{branchlist.data.data.nav_to.includes("programme")}}'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: clearValue
+            - pluginId: marketing_image
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: GET
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-08-18T08:26:08.000Z
+folder: Links

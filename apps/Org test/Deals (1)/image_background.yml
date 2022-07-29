@@ -1,0 +1,68 @@
+id: image_background
+type: widget
+subtype: FileInputWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - iconAfter: ''
+    - parseFiles: false
+    - maxSize: 1mb
+    - selectionType: single
+    - accept: '[''jpg'',''png'']'
+    - hidden: '{{!custom_redemption_page.value}}'
+    - customValidation: >-
+        {{image_background.files.length > 0 ||
+        MyWithULocalisedData.value.external_partner &&
+        MyWithULocalisedData.value.external_partner.background_image ? '' :
+        'Image background is required.'}}
+    - maxCount: null
+    - hideValidationMessage: false
+    - textBefore: Browse
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - parsing: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - minSize: ''
+    - placeholder: '{{MyWithULocalisedData.value.external_partner.background_image}}'
+    - label: Image Background (Must be PNG or JPG)
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: cloud-upload
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: mywithu_background_image_upload
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - minCount: null
+    - labelWrap: true
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 10.8
+    height: 1
+    width: 8
+createdAt: 2022-04-28T09:06:17.945Z

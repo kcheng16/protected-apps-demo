@@ -1,0 +1,100 @@
+id: create_mywithu_localised
+type: datasource
+subtype: FirebaseQuery
+resourceName: 0d4ce929-fb5a-4163-98b4-f83d95b31c4f
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - privateParams: []
+    - firestoreCollection: deals
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - endAt: ''
+    - firebaseService: firestore
+    - showSuccessToaster: false
+    - equalTo: ''
+    - cacheKeyTtl: ''
+    - metadata: null
+    - uid: ''
+    - editorMode: gui
+    - actionType: updateFirestore
+    - changesetObject: ''
+    - setDbValue: ''
+    - value: "{\n\"web\": {\n        \"content\": {\n            \"{{selected_locale_dropdown.value}}\": {\n                \"logo\": \"{{mywithu_logo_upload.data.signedUrl.split(\"?\")['0']}}\",\n                \"deal\": {\n                    \"subtitle\": \"{{my_withu_subtitle.value}}\",\n                    \"partner\": \"{{mywithu_partner_name.value}}\",\n                    \"header_bar_large\": \"{{my_header_unlock.value}}\",\n                    \"header_bar_small\": \"{{my_header_unlock_detail.value}}\",\n                    \"title\": \"{{my_withu_title.value}}\"\n                },\n                \"redeem\": {\n                    \"subtitle\": \"{{my_withu_subtitle_redemption.value}}\",\n                    \"title\": \"{{my_withu_title_redemption.value}}\",\n                }\n            },\n        },\n\t}\n}"
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - filterType: ''
+    - rawData: null
+    - userOptions: ''
+    - docId: '{{deal_list.selectedRow.data._id}}'
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - ordering: ''
+    - startAt: ''
+    - limitType: ''
+    - showLatestVersionUpdatedWarning: false
+    - dbRef: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: true
+    - showUpdateSetValueDynamicallyToggle: true
+    - phoneNumber: ''
+    - nextPageToken: ''
+    - runWhenPageLoads: false
+    - transformer: |-
+        var data = {{deal_list.selectedRow.data}}
+        var keys = Object.keys(data)
+        return keys
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: list_deals_by_name
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - useRawCollectionId: false
+    - firestoreOrderBy: ''
+    - requireConfirmation: false
+    - orderByChildValue: ''
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - limit: ''
+    - enableCaching: false
+    - firestoreOrderDirection: ''
+    - allowedGroups: []
+    - firestoreWhere: ''
+    - email: ''
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2022-01-13T09:59:10.297Z
+folder: MyWithU

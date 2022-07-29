@@ -1,0 +1,26 @@
+id: view_debug
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: 80%
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: View debug
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    height: 1
+    width: 3
+    tabNum: 9
+createdAt: 2021-10-09T19:00:05.192Z

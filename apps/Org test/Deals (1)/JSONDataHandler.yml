@@ -1,0 +1,142 @@
+id: JSONDataHandler
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: >
+        // Check if a deal is localised. If it is not, re-map the existing data
+        in the object appropriately.
+
+        let isLocalised = false;
+
+        let data = deal_list.selectedRow.data;
+
+        let objKeys = Object.keys(data);
+
+
+        let redeemTitle = "";
+
+        let redeemSubtitle = "";
+
+
+        if (objKeys.includes("web")) {
+          if (Object.keys(data.web).includes("content")) {
+            let localeKeys = Object.keys(data.web.content);
+            if (localeKeys.includes("en")) {
+              isLocalised = true;
+            }
+
+            if (Object.keys(data.web).includes("content")) {
+              if (Object.keys(data.web.content).includes("redeem")) {
+                redeemTitle = data.web.content.redeem.title;
+                redeemSubtitle = data.web.content.redeem.subtitle;
+              }
+            }
+          }
+        }
+
+
+        if (isLocalised) {
+          return "localised";
+        } else {
+          let title = iterate(data, "title");
+          let subtitle = iterate(data, "subtitle");
+          let partner = iterate(data, "partner");
+          let headerLarge = iterate(data, "header_bar_large");
+          let headerSmall = iterate(data, "header_bar_small");
+          let logo = iterate(data, "logo");
+
+          MapExistingData.trigger({
+            additionalScope: {
+              dealTitle: title ? title : "",
+              dealSubtitle: subtitle ? subtitle : "",
+              dealPartner: partner ? partner : "",
+              dealHeaderLarge: headerLarge ? headerLarge : "",
+              dealHeaderSmall: headerSmall ? headerSmall : "",
+              dealLogo: logo ? logo : "",
+              dealRedeemTitle: redeemTitle,
+              dealRedeemSubtitle: redeemSubtitle,
+            },
+          });
+        }
+
+
+        function iterate(obj, key) {
+          var result;
+
+          for (var property in obj) {
+            if (obj.hasOwnProperty(property)) {
+              if (typeof obj[property] === "object") {
+                result = iterate(obj[property], key);
+
+                if (typeof result !== "undefined") {
+                  return result;
+                }
+              } else if (property === key) {
+                return obj[key];
+              }
+            }
+          }
+        }
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events: []
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2022-01-26T09:59:41.159Z
+folder: JSONManagement

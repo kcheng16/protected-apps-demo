@@ -1,0 +1,32 @@
+id: dpa_in_place
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{check_dpa_state.value != 3}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: DPA In place
+    - type: success
+    - exportFileName: ''
+    - description: '{{data_final_display.value}}'
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 4.000000000000001
+    col: 8
+    height: 2.4
+    width: 4
+    tabNum: 8
+createdAt: 2021-09-13T22:07:58.061Z

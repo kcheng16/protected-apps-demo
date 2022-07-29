@@ -1,0 +1,79 @@
+id: generate_dpa
+type: datasource
+subtype: RESTQuery
+resourceName: 63a3b88b-1459-487a-a71a-d241900aef77
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: '{{payload}}'
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: document
+    - playgroundQueryUuid: 2641986d-8bc1-4866-a66a-f0d6f2e5b73c
+    - playgroundQueryId: 10
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - retoolVersion: 2.78.12
+    - importedQueryInputs:
+        ordered:
+          - payload: "{\n\t\"sandbox\": 0,\n\t\"template_id\": \"j6yMcaF4gQBIIQ\",\n\t\"title\": \"My New Document\",\n\t\"message\": \"This is my message.\",\n\t\"custom_requester_name\": \"\",\n\t\"custom_requester_email\": \"\",\n\t\"redirect\": \"https://myredirect.com/completed\",\n\t\"redirect_decline\": \"https://myredirect.com/declined\",\n\t\"client\": \"\",\n\t\"expires\": 1494276966,\n\t\"embedded_signing_enabled\": 0,\n\t\"signers\": [{\n\t\t\"role\": \"Sales Rep\",\n\t\t\"name\": \"Paul McSign\",\n\t\t\"email\": \"paul@mcsign.com\",\n\t\t\"pin\": \"1234\",\n\t\t\"signer_authentication_sms_enabled\": 1,\n\t\t\"signer_authentication_phone_number\": \"+43123221234\",\n\t\t\"message\": \"This is my custom message to Paul.\",\n\t\t\"deliver_email\": \"\",\n\t\t\"language\": \"en\"\n\t}, {\n\t\t\"role\": \"Client\",\n\t\t\"name\": \"Julian McSign\",\n\t\t\"email\": \"julian@mcsign.com\",\n\t\t\"pin\": \"4321\",\n\t\t\"message\": \"\",\n\t\t\"deliver_email\": \"\",\n\t\t\"language\": \"en\"\n\t}],\n\t\"recipients\": [{\n\t\t\"role\": \"Assistant\",\n\t\t\"name\": \"Jane McSign\",\n\t\t\"email\": \"jane@mcsign.com\",\n\t\t\"language\": \"en\"\n\t}, {\n\t\t\"role\": \"Finance Department\",\n\t\t\"name\": \"Frank McSign\",\n\t\t\"email\": \"frank@mcsign.com\",\n\t\t\"language\": \"en\"\n\t}],\n\t\"fields\": [{\n\t\t\"identifier\": \"unique_field_identifier_1\",\n\t\t\"value\": \"Merge Field Content\"\n\t}, {\n\t\t\"identifier\": \"unique_field_identifier_2\",\n\t\t\"value\": \"Other Merge Field Content\"\n\t}]\n}"
+    - isImported: true
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events: []
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: raw
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-10-20T18:51:03.654Z
+folder: Data_Sharing

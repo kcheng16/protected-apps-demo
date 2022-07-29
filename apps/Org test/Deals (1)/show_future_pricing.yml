@@ -1,0 +1,35 @@
+id: show_future_pricing
+type: widget
+subtype: SwitchWidget2
+template:
+  ordered:
+    - hidden: '{{deal_type_picker.value === 3}}'
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{deal_list.selectedRow.data.subscription.show_pricing_after}}'
+    - labelCaption: Only applies to MyWithU
+    - label: Show future pricing on landing page
+    - _validate: false
+    - invalid: false
+    - events:
+        ordered: []
+    - disabled: false
+    - labelPosition: right
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: web_offer
+    row: 15.8
+    height: 0.6
+    width: 12
+createdAt: 2021-09-25T11:15:59.174Z

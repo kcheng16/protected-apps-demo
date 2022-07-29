@@ -1,0 +1,43 @@
+id: button5
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: >-
+        {{get_revoke_progress.data.data.length == 0 ||
+        !get_revoke_progress.data.data.running}} 
+    - text: ''
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: reload
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: get_revoke_progress
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 1.1999999999999997
+    col: 11
+    height: 0.8
+    width: 1
+    tabNum: 10
+createdAt: 2022-01-10T11:12:31.860Z

@@ -1,0 +1,324 @@
+id: user_explorer
+type: widget
+subtype: TableWidget
+template:
+  ordered:
+    - showCustomButton: false
+    - sortMappedValue:
+        ordered: []
+    - _filteredSortedRenderedDataWithTypes: null
+    - heightType: fixed
+    - normalizedData: null
+    - saveChangesDisabled: ''
+    - columnTypeProperties:
+        ordered: []
+    - columnWidths: []
+    - showSummaryFooter: false
+    - disableRowSelectInteraction: false
+    - columnWidthsMobile: []
+    - hasNextAfterCursor: ''
+    - columnTypeSpecificExtras:
+        ordered: []
+    - onRowAdded: ''
+    - columnHeaderNames:
+        ordered: []
+    - alwaysShowPaginator: false
+    - columnColors:
+        ordered:
+          - last_workout_completed: ''
+          - link_id: ''
+          - agreed_compliance: ''
+          - points: ''
+          - last_seen: ''
+          - level: ''
+          - programme_states: ''
+          - status_id: ''
+          - scheduled_workouts: ''
+          - level_text: ''
+          - created_at: ''
+          - first_seen: ''
+          - name: ''
+          - sales: ''
+          - deal_id: ''
+          - agreed_data_sharing: ''
+          - user_id: ''
+          - app_build: ''
+          - last_updated: ''
+          - platform: ''
+          - trial_start_time: ''
+          - firebase_id: ''
+          - goal: ''
+          - Country: ''
+          - status_name: ''
+          - goal_text: ''
+          - app_version: ''
+          - locale: ''
+          - id: ''
+          - email: ''
+          - total_workouts_completed: ''
+          - total_points: ''
+          - aliases: ''
+          - agreed_marketing: ''
+    - columnFrozenAlignments:
+        ordered: []
+    - allowMultiRowSelect: false
+    - columnFormats:
+        ordered: []
+    - columnRestrictedEditing:
+        ordered: []
+    - showFilterButton: true
+    - _columnVisibility:
+        ordered:
+          - last_workout_completed: false
+          - link_id: false
+          - agreed_compliance: false
+          - points: false
+          - last_seen: false
+          - level: false
+          - programme_states: false
+          - status_id: false
+          - scheduled_workouts: false
+          - level_text: false
+          - created_at: true
+          - first_seen: false
+          - name: true
+          - sales: true
+          - deal_id: true
+          - agreed_data_sharing: false
+          - user_id: true
+          - app_build: false
+          - last_updated: false
+          - platform: false
+          - trial_start_time: false
+          - firebase_id: true
+          - goal: false
+          - Country: false
+          - status_name: false
+          - goal_text: false
+          - app_version: false
+          - locale: false
+          - id: true
+          - email: false
+          - total_workouts_completed: false
+          - total_points: false
+          - aliases: false
+          - agreed_marketing: false
+    - _columnSummaryTypes:
+        ordered: []
+    - _columnsWithLegacyBackgroundColor:
+        set: []
+    - showAddRowButton: false
+    - _unfilteredSelectedIndex: ''
+    - nextBeforeCursor: ''
+    - columnVisibility:
+        ordered:
+          - last_workout_completed: false
+          - link_id: false
+          - agreed_compliance: false
+          - points: false
+          - last_seen: false
+          - level: false
+          - programme_states: false
+          - status_id: false
+          - scheduled_workouts: false
+          - level_text: false
+          - created_at: true
+          - first_seen: false
+          - name: true
+          - sales: true
+          - deal_id: true
+          - agreed_data_sharing: false
+          - user_id: true
+          - app_build: false
+          - last_updated: false
+          - platform: false
+          - trial_start_time: false
+          - firebase_id: true
+          - goal: false
+          - Country: false
+          - status_name: false
+          - goal_text: false
+          - app_version: false
+          - locale: false
+          - id: true
+          - email: false
+          - total_workouts_completed: false
+          - total_points: false
+          - aliases: false
+          - agreed_marketing: false
+    - selectedPageIndex: '0'
+    - applyDynamicSettingsToColumnOrder: false
+    - rowColor:
+        array: []
+    - actionButtonColumnName: Actions
+    - resetAfterSave: true
+    - filterStackType: and
+    - downloadRawData: false
+    - showFetchingIndicator: true
+    - serverPaginated: false
+    - data: '{{users_bq.data}}'
+    - displayedData: null
+    - actionButtons: []
+    - actionButtonSelectsRow: true
+    - selectRowByDefault: true
+    - defaultSortByColumn: ''
+    - paginationOffset: 0
+    - columnAlignment:
+        ordered: []
+    - columnSummaries:
+        object: {}
+    - sortedDesc: false
+    - customButtonName: re
+    - columnMappersRenderAsHTML:
+        ordered: []
+    - showRefreshButton: true
+    - pageSize: 5
+    - useDynamicColumnSettings: false
+    - style:
+        ordered:
+          - headerBackground: rgb(30, 19, 62)
+          - headerText: rgb(255, 255, 255)
+          - toolbarBackground: rgb(255, 255, 255)
+    - actionButtonPosition: left
+    - dynamicRowHeights: false
+    - bulkUpdateAction: ''
+    - afterCursor: ''
+    - onCustomButtonPressQueryName: ''
+    - changeSet:
+        object: {}
+    - sortedColumn: ''
+    - _columnSummaryValues:
+        ordered: []
+    - checkboxRowSelect: true
+    - _compatibilityMode: true
+    - showColumnBorders: true
+    - clearSelectionLabel: Clear selection
+    - _renderedDataWithTypes: null
+    - columnAllowOverflow:
+        ordered: []
+    - beforeCursor: ''
+    - serverPaginationType: limitOffsetBased
+    - onRowSelect: ''
+    - showDownloadButton: true
+    - selectedIndex: null
+    - defaultSortDescending: false
+    - _sortedDisplayedDataIndices: null
+    - dynamicColumnSettings: null
+    - totalRowCount: ''
+    - recordUpdates:
+        array: []
+    - newRow: null
+    - emptyMessage: No rows found
+    - columnEditable:
+        ordered: []
+    - _viewerColumnSummaryTypes:
+        object: {}
+    - filters:
+        array: []
+    - displayedDataIndices: null
+    - disableSorting:
+        ordered: []
+    - columnMappers:
+        ordered: []
+    - showClearSelection: false
+    - doubleClickToEdit: false
+    - overflowType: pagination
+    - _reverseSortedDisplayedDataIndices: null
+    - selectedCell:
+        object:
+          index: null
+          data: null
+          columnName: null
+    - columns:
+        - id
+        - name
+        - email
+        - sales
+        - locale
+        - Country
+        - first_seen
+        - link_id
+        - last_seen
+        - app_build
+        - app_version
+        - trial_start_time
+        - last_workout_completed
+        - user_id
+        - last_updated
+        - goal
+        - level
+        - deal_id
+        - agreed_compliance
+        - agreed_marketing
+        - agreed_data_sharing
+        - created_at
+        - firebase_id
+        - points
+        - total_points
+        - status_id
+        - status_name
+        - total_workouts_completed
+        - platform
+        - aliases
+        - programme_states
+        - scheduled_workouts
+        - goal_text
+        - level_text
+    - defaultSelectedRow: first
+    - freezeActionButtonColumns: false
+    - sort: null
+    - _columns:
+        - id
+        - name
+        - email
+        - sales
+        - locale
+        - Country
+        - first_seen
+        - link_id
+        - last_seen
+        - app_build
+        - app_version
+        - trial_start_time
+        - last_workout_completed
+        - user_id
+        - last_updated
+        - goal
+        - level
+        - deal_id
+        - agreed_compliance
+        - agreed_marketing
+        - agreed_data_sharing
+        - created_at
+        - firebase_id
+        - points
+        - total_points
+        - status_id
+        - status_name
+        - total_workouts_completed
+        - platform
+        - aliases
+        - programme_states
+        - scheduled_workouts
+        - goal_text
+        - level_text
+    - sortByRawValue:
+        ordered: []
+    - calculatedColumns: []
+    - selectedRow:
+        object:
+          index: null
+          data: null
+    - showPaginationOnTop: false
+    - _reverseDisplayedDataIndices: null
+    - nextAfterCursor: ''
+    - useCompactMode: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: view_users
+    row: 1.2
+    height: 8
+    width: 12
+createdAt: 2021-10-09T18:52:56.377Z

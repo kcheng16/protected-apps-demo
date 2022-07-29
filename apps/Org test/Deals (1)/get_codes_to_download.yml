@@ -1,0 +1,110 @@
+id: get_codes_to_download
+type: datasource
+subtype: RESTQuery
+resourceName: a683f079-6b4c-425c-b4ef-45fe6076b5c6
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: >-
+        [{"key":"deal_id","value":"{{dealID}}"},{"key":"burn","value":"{{burn}}"},{"key":"batch","value":"{{batch}}"},{"key":"burned","value":"{{burned}}"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: 330
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: false
+    - paginationEnabled: false
+    - query: getCodesForDeal
+    - playgroundQueryUuid: 2a6ec218-f19f-43f4-aabe-60e63be25ab4
+    - playgroundQueryId: 56
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - retoolVersion: 2.80.16
+    - importedQueryInputs:
+        ordered:
+          - dealID: '{{deal_list.selectedRow.data._id}}'
+          - burn: '{{download_codes_burn.value}}'
+          - batch: '{{download_codes_batch.value}}'
+          - burned: '{{download_codes_burned.value}}'
+    - isImported: true
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: util
+            - method: exportData
+            - pluginId: ''
+            - params:
+                ordered:
+                  - fileType: csv
+                  - fileName: codes_{{deal_list.selectedRow.data._id}}
+                  - data: '{{download_codes_table.displayedData}}'
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{download_codes_table.data != null}}'
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: No Codes Found
+                        - description: Switch deal or change download options.
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2022-01-14T09:18:31.892Z
+folder: Codes

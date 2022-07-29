@@ -1,0 +1,8 @@
+id: fetching_codes
+type: state
+subtype: State
+template:
+  ordered:
+    - value: null
+createdAt: 2022-01-06T12:17:01.261Z
+folder: Temporary state

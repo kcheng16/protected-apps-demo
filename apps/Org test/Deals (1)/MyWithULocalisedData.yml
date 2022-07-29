@@ -1,0 +1,9 @@
+id: MyWithULocalisedData
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: "// ASIDE: when deal is selected, fields are added using UpdateMyWithU, this can be used to change web data to localised versions should they be legacy \n\nvar locale = {{my_with_u_dropdown.value}}\nvar content_data = {{deal_list.selectedRow.data.web.content}}\nvar\tlocalised_data = content_data[locale]\n\nif(localised_data == undefined || content_data == undefined){\n  localised_data = {\n                \"logo\": \"\",\n                \"deal\": {\n                    \"subtitle\": \"\",\n                    \"partner\": \"\",\n                    \"header_bar_large\": \"\",\n                    \"header_bar_small\": \"\",\n                    \"title\": \"\"\n                },\n                \"redeem\": {\n                    \"subtitle\": \"\",\n                    \"title\": \"\",\n                  \t\"textbox_title\": \"\",\n                  \t\"textbox_placeholder\": \"\",\n                  \t\"textbox_button\": \"\"\n                },\n    \t\t\t\t\t\t\"external_partner\": {\n                  \t\"enabled\": null,\n                  \t\"theme_color\": \"\",\n                    \"partner_text\": \"\",\n                    \"background_image\": \"\",\n                    \"dark_header\": null\n                }\n            }\n}\n  \nreturn localised_data\n\n"
+    - value: ''
+createdAt: 2022-01-11T11:59:56.987Z
+folder: MyWithU

@@ -1,0 +1,26 @@
+id: new_deal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: 400px
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: New Deal ➕
+style:
+  ordered: []
+position2:
+  position2:
+    subcontainer: header
+    col: 10
+    height: 1
+    width: 2
+createdAt: 2021-08-18T13:26:05.241Z

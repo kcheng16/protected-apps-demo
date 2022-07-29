@@ -1,0 +1,52 @@
+id: create_deal
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: fixed
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: true
+    - submitDisabled: ''
+    - submitButtonText: Create new deal
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: add_new_deal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{copy_deal.value === false}}'
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: lookup_deal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{copy_deal.value === true}}'
+    - hideSubmit: false
+    - loading: >-
+        {{add_new_deal.isFetching || lookup_deal.isFetching ||
+        add_new_deal_copy.isFetching}}
+    - overflowType: hidden
+    - disabled: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: new_deal
+    height: 9
+    width: 12
+createdAt: 2021-08-18T13:26:29.324Z

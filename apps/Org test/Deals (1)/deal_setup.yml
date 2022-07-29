@@ -1,0 +1,41 @@
+id: deal_setup
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: fixed
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - hidden: ''
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: false
+    - submitDisabled: '{{deal_list.selectedRow.data === undefined}}'
+    - submitButtonText: Save
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: update_deal_metadata
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - hideSubmit: false
+    - loading: '{{update_deal_metadata.isFetching}}'
+    - overflowType: hidden
+    - disabled: '{{deal_list.selectedRow.data === undefined}}'
+style:
+  ordered: []
+position2:
+  position2:
+    row: 0.9999999999999987
+    col: 7
+    height: 10
+    width: 5
+createdAt: 2021-09-21T18:23:02.752Z

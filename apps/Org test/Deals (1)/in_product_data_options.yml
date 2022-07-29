@@ -1,0 +1,52 @@
+id: in_product_data_options
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: fixed
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - hidden: ''
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: false
+    - submitDisabled: '{{check_dpa_state.value != 3}}'
+    - submitButtonText: Save
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: clear_data_sharing
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{show_custom_dpa.value === false}}'
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: update_data_sharing_localised
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - hideSubmit: false
+    - loading: '{{update_data_sharing.isFetching || clear_data_sharing.isFetching}}'
+    - overflowType: hidden
+    - disabled: '{{check_dpa_state.value != 3}}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 1.6
+    height: 9.4
+    width: 8
+    tabNum: 8
+createdAt: 2021-10-03T16:06:56.202Z

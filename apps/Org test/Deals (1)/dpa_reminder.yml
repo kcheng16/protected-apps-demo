@@ -1,0 +1,42 @@
+id: dpa_reminder
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: '{{check_dpa_state.value != 2}}'
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: open
+            - type: datasource
+            - method: trigger
+            - pluginId: eversign_check_reminder
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Send DPA reminder
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 11.400000000000002
+    col: 8
+    height: 1
+    width: 4
+    tabNum: 8
+createdAt: 2021-09-13T22:09:31.573Z

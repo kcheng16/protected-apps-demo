@@ -1,0 +1,41 @@
+id: check_dpa
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: '{{check_dpa_state.value != 2}}'
+    - text: Check DPA status
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: eversign_check_doc_status
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: '{{eversign_check_doc_status.isFetching}}'
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 12.400000000000002
+    col: 8
+    height: 1
+    width: 4
+    tabNum: 8
+createdAt: 2021-11-07T08:08:58.828Z

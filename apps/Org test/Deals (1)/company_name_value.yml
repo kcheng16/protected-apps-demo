@@ -1,0 +1,16 @@
+id: company_name_value
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |+
+        if ({{company_location.value === true}}) {
+          return {{company_address.data.company_name}} ;
+        } 
+        else  {return {{company_name.value}}
+              }
+
+
+    - value: ''
+createdAt: 2021-11-07T11:49:47.045Z
+folder: Data_Sharing

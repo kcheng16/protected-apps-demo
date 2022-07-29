@@ -1,0 +1,9 @@
+id: DpaClauseTransformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: "var locale = {{datasharing_locale_dropdown.value}}\n\nswitch(locale){\n  case 'en': \n  \treturn {{deal_list.selectedRow.data.data_sharing.copy.en}};\n  break;\n  case 'es':\n  \treturn {{deal_list.selectedRow.data.data_sharing.copy.es}};\n  break; \n  case 'pt':\n   \treturn {{deal_list.selectedRow.data.data_sharing.copy.pt}}\n  break; \n}"
+    - value: ''
+createdAt: 2022-01-11T14:57:05.446Z
+folder: Data_Sharing

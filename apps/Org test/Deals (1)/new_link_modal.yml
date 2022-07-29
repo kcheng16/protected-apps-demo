@@ -1,0 +1,27 @@
+id: new_link_modal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: New link
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 7.4
+    height: 1
+    width: 4
+    tabNum: 2
+createdAt: 2021-09-11T08:36:40.696Z

@@ -1,0 +1,11 @@
+id: data_permisions_final_value
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        return
+        {{data_permisions_generator_email.value}}+"\n"+{{data_permisions_generator_fitness.value}}+"\n"+{{data_permisions_generator_name.value}}
+    - value: ''
+createdAt: 2021-11-07T07:06:42.455Z
+folder: Data_Sharing

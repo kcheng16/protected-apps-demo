@@ -1,0 +1,61 @@
+id: dpa_wizard
+type: widget
+subtype: WizardWidget
+template:
+  ordered:
+    - spinWhenChildrenAreFetching: true
+    - currentStep: C-kgSdC_P
+    - steps:
+        ordered:
+          - C-kgSdC_P:
+              ordered:
+                - name: Company info
+                - navButtons:
+                    - ordered:
+                        - buttonText: Next step
+                        - buttonType: goToStep
+                        - buttonGoToStep: NdUcVNdQ2
+                        - buttonEnabled: '{{true}}'
+                        - triggerButtonIf: '{{false}}'
+                - visualizationXCoordinate: 600
+                - visualizationYCoordinate: 600
+          - NdUcVNdQ2:
+              ordered:
+                - name: Key contacts
+                - navButtons:
+                    - ordered:
+                        - buttonText: Next step
+                        - buttonType: goToStep
+                        - buttonGoToStep: vBihSpEWC
+                        - buttonEnabled: '{{true}}'
+                        - triggerButtonIf: '{{false}}'
+                - visualizationXCoordinate: 600
+                - visualizationYCoordinate: 728
+                - isVirtual: false
+                - onEnterQuery: ''
+                - hideTitle: false
+          - vBihSpEWC:
+              ordered:
+                - name: Signatures
+                - navButtons: []
+                - visualizationXCoordinate: 600
+                - visualizationYCoordinate: 856
+                - isVirtual: false
+                - onEnterQuery: ''
+                - hideTitle: false
+    - stepHistory: []
+    - hidden: false
+    - customInitialStepName: ''
+    - scroll: false
+    - initialStep: C-kgSdC_P
+    - onReset: ''
+    - onStepChange: company_officers
+    - hideResetButton: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: load_dpa_template
+    height: 13.799999999999997
+    width: 12
+createdAt: 2021-10-03T15:01:25.761Z

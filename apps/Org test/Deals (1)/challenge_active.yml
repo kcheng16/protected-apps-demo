@@ -1,0 +1,35 @@
+id: challenge_active
+type: widget
+subtype: SwitchWidget2
+template:
+  ordered:
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{deal_challenges.selectedItem.active || true}}'
+    - labelCaption: ''
+    - label: Is Active?
+    - _validate: false
+    - invalid: false
+    - events:
+        ordered: []
+    - disabled: false
+    - labelPosition: right
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: challenge_form
+    row: 12.400000000000002
+    height: 0.6
+    width: 5
+createdAt: 2022-06-09T16:44:31.692Z

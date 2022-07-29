@@ -1,0 +1,107 @@
+id: in_app_logo_query
+type: datasource
+subtype: GCSQuery
+resourceName: 83c303be-5cd0-43cb-8c41-778cd336e57e
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - fileKey: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - delimiter: ''
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - sourceFileKey: ''
+    - uploadFileName: >-
+        {{deal_list.selectedRow.data._id.substring(13)}}_{{in_app_logo_upload.files['0'].name}}
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - uploadData: '{{in_app_logo_upload.value}}'
+    - uploadFileAcl: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - metadata: null
+    - sourceBucketName: ''
+    - actionType: upload
+    - copySource: ''
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - prefix: ''
+    - changeset: ''
+    - rawData: null
+    - signedOperationOptions: ''
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - bucketName: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - signedOperationName: ''
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - uploadFileType: binary
+    - useRawUploadFileType: false
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setImageUrl
+            - pluginId: in_app_logo
+            - params:
+                ordered:
+                  - imageUrl: '{{in_app_logo_query.data.signedUrl.split("?")[''0'']}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: New logo uploaded
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-10-31T11:39:23.206Z
+folder: in_app

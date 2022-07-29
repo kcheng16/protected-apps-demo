@@ -1,0 +1,40 @@
+id: delete_all_codes
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: ''
+    - hidden: false
+    - text: Delete all codes for deal
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: delete_codes_for_deal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: '{{delete_codes_for_deal.isFetching}}'
+    - loaderPosition: auto
+    - disabled: '{{list_codes_deal.data.length == 0}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 9
+    height: 1
+    width: 3
+    tabNum: 5
+createdAt: 2021-08-18T14:37:23.056Z

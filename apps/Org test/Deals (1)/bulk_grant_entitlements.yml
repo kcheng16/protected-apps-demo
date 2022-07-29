@@ -1,0 +1,81 @@
+id: bulk_grant_entitlements
+type: datasource
+subtype: RESTQuery
+resourceName: a683f079-6b4c-425c-b4ef-45fe6076b5c6
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: >-
+        [{"key":"deal_id","value":"{{deal_id}}"},{"key":"duration","value":"{{duration}}"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: 222
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: '[]'
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: grantDealEntitlements
+    - playgroundQueryUuid: 9a99aab9-eb56-49f1-bf8b-70ac1b287e61
+    - playgroundQueryId: 43
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - retoolVersion: 2.80.16
+    - importedQueryInputs:
+        ordered:
+          - deal_id: '{{deal_list.selectedRow.data._id}}'
+          - duration: '{{entitlement_duration.value}}'
+    - isImported: true
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: Are you sure you would like to grant these entitlements?
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '200'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events: []
+    - queryTimeout: '120000'
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-12-22T11:19:54.011Z
+folder: Entitlements

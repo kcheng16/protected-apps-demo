@@ -1,0 +1,12 @@
+id: data_final_display
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        return "We can now share the following data with the client: "+"Email
+        "+{{email_viewer.value}}+" Name "+{{email_viewer.value}}+" Fitness Data
+        "+{{fitness_data_viewer.value}}
+    - value: ''
+createdAt: 2021-11-07T11:59:50.039Z
+folder: Data_Sharing

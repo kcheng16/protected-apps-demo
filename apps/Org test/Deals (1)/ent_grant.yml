@@ -1,0 +1,66 @@
+id: ent_grant
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Grant Entitlements
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - method: run
+            - enabled: '{{ent_duration.value != ''''}}'
+            - params:
+                ordered:
+                  - src: |-
+                      create_entitlement_job.trigger({
+                        additionalScope: {functionName: 'grant'}
+                      });
+            - targetId: null
+            - pluginId: ''
+            - waitType: debounce
+            - event: click
+            - type: script
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: validate
+            - pluginId: ent_duration
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: modal1
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: modal1
+    row: 3.4
+    col: 2
+    height: 1
+    width: 8
+createdAt: 2022-04-19T09:29:34.280Z

@@ -1,0 +1,29 @@
+id: upload_existing_dpa
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: '{{check_dpa_state.value != 1}}'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Upload existing DPA
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 9.400000000000002
+    col: 8
+    height: 1
+    width: 4
+    tabNum: 8
+createdAt: 2021-09-13T22:20:33.309Z

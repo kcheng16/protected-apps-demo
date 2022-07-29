@@ -1,0 +1,31 @@
+id: text35
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - hidden: '{{canShowPreview.value}}'
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: '**Update the fields above to preview the custom redemption page!**'
+    - style:
+        ordered:
+          - color: '#0a0e14b3'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: container1
+    subcontainer: '93050'
+    row: 0.6
+    col: 4
+    height: 0.6
+    width: 4
+createdAt: 2022-04-28T15:02:52.624Z

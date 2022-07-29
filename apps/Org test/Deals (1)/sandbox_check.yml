@@ -1,0 +1,14 @@
+id: sandbox_check
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{retoolContext.environment === "staging"}}) {
+          return 1;
+        } 
+        else  {return 0
+              }
+    - value: ''
+createdAt: 2021-11-07T06:22:43.472Z
+folder: Data_Sharing

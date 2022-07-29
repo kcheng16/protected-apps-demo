@@ -1,0 +1,15 @@
+id: stats_dealid
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |2-
+          if ({{retoolContext.environment === "staging"}}) {
+          return "L8rUJS1zZgjNpo2hcr5f";
+        } 
+        if ({{retoolContext.environment === "production"}}) {
+          return {{deal_list.selectedRow.data._id}};
+        }
+    - value: ''
+createdAt: 2021-11-08T12:59:55.827Z
+folder: Stats

@@ -1,0 +1,14 @@
+id: data_permisions_generator_fitness
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{fitness_dpa_auto.value === true}}) {
+          return "Fitness data, including but not limited to workout data, programme data & goals";
+        } 
+        else  {return ""
+              }
+    - value: ''
+createdAt: 2021-11-07T07:04:46.578Z
+folder: Data_Sharing

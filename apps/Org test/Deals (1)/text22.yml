@@ -1,0 +1,29 @@
+id: text22
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: >-
+        Logged on:
+        {{moment(get_revoke_progress.data.data.updated_at).format('DD/MM/YYYY
+        HH:mm')}}
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: revoke_log
+    row: 1.2
+    height: 0.2
+    width: 12
+createdAt: 2022-01-14T13:15:59.073Z

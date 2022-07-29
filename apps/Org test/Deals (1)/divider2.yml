@@ -1,0 +1,21 @@
+id: divider2
+type: widget
+subtype: DividerWidget
+template:
+  ordered:
+    - hidden: false
+    - maintainSpaceWhenHidden: false
+    - showInEditor: false
+    - tooltipText: ''
+    - horizontalAlign: center
+    - text: ''
+    - textSize: default
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 9
+    height: 0.2
+    width: 8
+createdAt: 2021-11-05T15:00:42.149Z

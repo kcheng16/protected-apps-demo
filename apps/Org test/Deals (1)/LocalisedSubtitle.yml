@@ -1,0 +1,9 @@
+id: LocalisedSubtitle
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: "var locale = {{my_with_u_dropdown.value}}\n\nswitch(locale){\n  case 'en': \n  \treturn {{deal_list.selectedRow.data.web.content.deal.subtitle.en}};\n  break;\n  case 'es':\n  \treturn {{deal_list.selectedRow.data.web.content.deal.subtitle.es}};\n  break; \n  case 'pt':\n   \treturn {{deal_list.selectedRow.data.web.content.deal.subtitle.pt}}\n  break; \n}\n"
+    - value: ''
+createdAt: 2022-01-11T11:12:10.959Z
+folder: MyWithU

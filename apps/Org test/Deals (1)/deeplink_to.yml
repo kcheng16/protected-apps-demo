@@ -1,0 +1,67 @@
+id: deeplink_to
+type: widget
+subtype: ButtonGroupWidget
+template:
+  ordered:
+    - values: '["","trainer","workout","collection","programme"]'
+    - hidden: '{{my_withu_toggle.value === true}}'
+    - onChange: ''
+    - tooltipText: ''
+    - value: '{{branchlist.data.data.nav_to.split(''/'')[0]}}'
+    - renderAsHtml: false
+    - label: Deeplink to?
+    - labelMaxWidth: ''
+    - labelPlacedOnLeft: false
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: trainers_list
+            - params:
+                ordered:
+                  - value: ''
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{deeplink_to.value === "trainer"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: workout_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{deeplink_to.value === "workout"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: collection_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{deeplink_to.value === "collection"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: programme_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{deeplink_to.value === "programme"}}'
+    - disabled: ''
+    - labels: '["No Deeplink","Trainers","Workouts","Collections","Programmes"]'
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    row: 9.799999999999999
+    height: 2
+    width: 12
+createdAt: 2021-09-11T09:32:55.035Z

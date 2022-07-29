@@ -1,0 +1,9 @@
+id: DataSharingLinkText
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: "var locale = {{datasharing_locale_dropdown.value}}\n\nswitch(locale){\n  case 'en': \n  \treturn {{deal_list.selectedRow.data.data_sharing.handlebars.link.text.en}};\n  break;\n  case 'es':\n  \treturn {{deal_list.selectedRow.data.data_sharing.handlebars.link.text.es}};\n  break; \n  case 'pt':\n   \treturn {{deal_list.selectedRow.data.data_sharing.handlebars.link.text.pt}}\n  break; \n}"
+    - value: ''
+createdAt: 2022-01-11T15:03:16.037Z
+folder: Data_Sharing

@@ -1,0 +1,37 @@
+id: custom_redemption_page
+type: widget
+subtype: SwitchWidget2
+template:
+  ordered:
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: >-
+        {{MyWithULocalisedData.value.external_partner ?
+        MyWithULocalisedData.value.external_partner.enabled : false}}
+    - labelCaption: ''
+    - label: Custom Code Redemption Page
+    - _validate: false
+    - invalid: false
+    - events:
+        ordered: []
+    - disabled: false
+    - labelPosition: right
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 9.2
+    height: 0.6
+    width: 4
+createdAt: 2022-04-28T11:15:05.674Z
