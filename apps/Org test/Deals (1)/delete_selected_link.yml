@@ -1,0 +1,43 @@
+id: delete_selected_link
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: ''
+    - hidden: false
+    - text: Delete selected link
+    - showInEditor: false
+    - tooltipText: ''
+    - style:
+        ordered:
+          - background: '#c74438ff'
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: delete_link_branch
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: '{{current_deal_links.value == null}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 9.4
+    height: 1
+    width: 4
+    tabNum: 2
+createdAt: 2021-08-18T08:34:14.080Z

@@ -1,0 +1,26 @@
+id: text6
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: '**Please select the type of data we will be sharing**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpa_upload_container
+    row: 3.8
+    height: 0.6
+    width: 12
+createdAt: 2021-11-05T11:37:52.387Z

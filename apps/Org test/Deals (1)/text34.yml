@@ -1,0 +1,89 @@
+id: text34
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: ''
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: >-
+        <div style=" display: flex; flex-direction: column; justify-content:
+        center; align-items: center; height: 800px; width: 1400px; " > <div
+        style="display: flex; flex-direction: row"> <div style="width: 700px;
+        height: 800px;"> <img style="object-fit: cover"
+        src="{{MyWithULocalisedData.value.external_partner.background_image}}"
+        width="100%" height="100%" alt="" /> </div> <div style=" display: flex;
+        flex-direction: column; width: 700px; height: 800px; align-items:
+        center; justify-content: space-between; padding-top: 50px;
+        padding-bottom: 50px; " > <div style=" display: flex; flex-direction:
+        row; justify-content: center; align-items: center; " > <div
+        style="background-color: #{{theme_color.value}}; border-radius: 100px;
+        height: 20px; width: 20px;" ></div> <div style="background-color:
+        #bcbdbc; height: 3px; width: 40px"></div> <div style=" background-color:
+        #bcbdbc; border-radius: 100px; height: 20px; width: 20px; " ></div> <div
+        style="background-color: #bcbdbc; height: 3px; width: 40px"></div> <div
+        style=" background-color: #bcbdbc; border-radius: 100px; height: 20px;
+        width: 20px; " ></div> </div> <div style="display: flex; flex-direction:
+        row"> <img style="align-self: center; margin-right: 20px; object-fit:
+        contain" src="{{MyWithULocalisedData.value.logo}}" alt="" width="150px"
+        height="80px" /> <div style="align-self:center; background-color:
+        #{{theme_color.value}}; height: 100px; width: 2px;" ></div> <img
+        style="align-self: center; margin-left: 20px; object-fit: contain"
+        src="https://storage.googleapis.com/wu-data-web/wul.png" alt=""
+        width="150px" /> </div> <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: column"> <img
+        style="align-self: center; margin-left: 20px; margin-right: 20px"
+        src="https://storage.googleapis.com/withu-admin-stage/html_asset_4.png"
+        alt="" width="35" height="35" /> <span style="margin-top: 10px; color:
+        #{{theme_color.value}}; font-size: 11px; align-self: center;" >1000+
+        on-<br />demand<br />Workouts</span > </div> <div style="display: flex;
+        flex-direction: column"> <img style="align-self: center; margin-left:
+        20px; margin-right: 20px"
+        src="https://storage.googleapis.com/withu-admin-stage/html_asset_3.png"
+        alt="" width="35" height="35" /> <span style="margin-top: 10px; color:
+        #{{theme_color.value}}; font-size: 11px; align-self: center;" >World-<br
+        />renowned<br />coaches</span > </div> <div style="display: flex;
+        flex-direction: column"> <img style="align-self: center; margin-left:
+        20px; margin-right: 20px"
+        src="https://storage.googleapis.com/withu-admin-stage/html_asset_2.png"
+        alt="" width="35" height="35" /> <span style="margin-top: 10px; color:
+        #{{theme_color.value}}; font-size: 11px; align-self: center;" >All
+        ability<br />programmes</span > </div> <div style="display: flex;
+        flex-direction: column"> <img style="align-self: center; margin-left:
+        20px; margin-right: 20px"
+        src="https://storage.googleapis.com/withu-admin-stage/html_asset_1.png"
+        alt="" width="35" height="35" /> <span style="margin-top: 10px; color:
+        #{{theme_color.value}}; font-size: 11px; align-self: center;"
+        >Workout<br />anytime,<br />anywhere</span > </div> </div> <div
+        style="display: flex; flex-direction: column; align-items: center">
+        <span style=" color: #0e052d; font-weight: bold; font-size: 22px;
+        text-align: center; margin-bottom: 15px; "
+        >{{MyWithULocalisedData.value.external_partner.partner_text}}</span >
+        <div style=" height: 40px; width: 220px; border: 1.5px solid #0e052d;
+        border-radius: 3px; margin-bottom: 10px; display: flex; flex-direction:
+        column; align-items: center; justify-content: center; padding: 10px; " >
+        <span style="color: grey"
+        >{{MyWithULocalisedData.value.redeem.textbox_placeholder}}</span >
+        </div> <div style="height: 35px; width: 220px; border-radius: 3px;
+        background-color: #{{theme_color.value}}; color: white; display: flex;
+        flex-direction: row; align-items: center; justify-content: center;
+        font-weight: bold" > {{MyWithULocalisedData.value.redeem.textbox_button
+        || 'Sign Up Now'}} </div> </div> </div> </div> </div>
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: container1
+    subcontainer: '93050'
+    row: -1.3322676295501878e-15
+    height: 0.6
+    width: 12
+createdAt: 2022-04-28T12:02:55.514Z

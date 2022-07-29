@@ -1,0 +1,40 @@
+id: in_app_form
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: auto
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: false
+    - submitDisabled: ''
+    - submitButtonText: Save
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: update_in_app_localised
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - hideSubmit: false
+    - loading: '{{update_in_app.isFetching}}'
+    - overflowType: hidden
+    - disabled: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    height: 19.8
+    width: 12
+    tabNum: 3
+createdAt: 2021-08-18T10:07:46.532Z

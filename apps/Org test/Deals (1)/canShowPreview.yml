@@ -1,0 +1,20 @@
+id: canShowPreview
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        const data = {{MyWithULocalisedData.value}};
+
+        let canShowPreview = false;
+
+        if(data.external_partner) {
+          const partner = data.external_partner;
+          
+          if(partner.enabled && partner.theme_color && partner.partner_text && partner.partner_logo && partner.background_image && partner.dark_header !== undefined && partner.dark_header !== null) canShowPreview = true;
+        }
+
+        return canShowPreview;
+    - value: ''
+createdAt: 2022-04-28T14:57:44.142Z
+folder: MyWithU

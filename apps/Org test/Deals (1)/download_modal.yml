@@ -1,0 +1,40 @@
+id: download_modal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: open
+            - type: datasource
+            - method: trigger
+            - pluginId: get_batches_for_deal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: '{{ get_batches_for_deal.isFetching }}'
+    - disabled: '{{list_codes_deal.data.length == 0}}'
+    - buttonText: Download CSV
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 8
+    height: 1
+    width: 6
+    tabNum: 5
+createdAt: 2022-01-14T10:17:57.092Z

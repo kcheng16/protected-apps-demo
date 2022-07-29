@@ -1,0 +1,14 @@
+id: image_check
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{marketing_image.files.length == 0  }}) {
+          return "https://www.withutraining.com/img/mobile-tag.jpg";
+        } 
+        else  {return {{upload_image.data.signedUrl.split("?")['0']}}
+              }
+    - value: ''
+createdAt: 2021-10-31T08:30:23.476Z
+folder: Links

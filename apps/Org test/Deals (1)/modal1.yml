@@ -1,0 +1,26 @@
+id: modal1
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Manage Entitlements
+style:
+  ordered: []
+position2:
+  position2:
+    container: deal_setup
+    row: 9.6
+    height: 1
+    width: 12
+createdAt: 2022-04-19T09:27:03.623Z

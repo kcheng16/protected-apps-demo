@@ -1,0 +1,96 @@
+id: dl_dpa
+type: datasource
+subtype: GCSQuery
+resourceName: 83c303be-5cd0-43cb-8c41-778cd336e57e
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - fileKey: '{{deal_list.selectedRow.data.dpa.dpa_file.split("/")[''4'']}}'
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - delimiter: ''
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - sourceFileKey: ''
+    - uploadFileName: manual-dpa-{{deal_list.selectedRow.data._id}}.pdf
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - uploadData: '{{dpa_upload.value}}'
+    - uploadFileAcl: project-private
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - metadata: null
+    - sourceBucketName: ''
+    - actionType: getSignedUrl
+    - copySource: ''
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - prefix: ''
+    - changeset: ''
+    - rawData: null
+    - signedOperationOptions: ''
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - bucketName: '{{bucket_source.value}}'
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - signedOperationName: read
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - uploadFileType: binary
+    - useRawUploadFileType: false
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - newTab: true
+                  - url: '{{dl_dpa.data.signedUrl}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-11-05T11:57:04.079Z
+folder: Data_Sharing

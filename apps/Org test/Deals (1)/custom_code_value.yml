@@ -1,0 +1,55 @@
+id: custom_code_value
+type: widget
+subtype: TextInputWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - iconAfter: ''
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: '12'
+    - hidden: '{{burnable_control.value === true || custom_code.value === false}}'
+    - customValidation: ''
+    - patternType: regex
+    - hideValidationMessage: false
+    - textBefore: '{{deal_list.selectedRow.data._id.substring(1, 4).toLocaleUpperCase()}}'
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - showClear: false
+    - pattern: ^[a-zA-Z0-9]{4,12}$
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: ''
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: FB50FREE
+    - label: 'Code value '
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: ''
+    - minLength: '6'
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - autoCapitalize: characters
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: create_codes
+    row: 1.6
+    height: 1
+    width: 12
+createdAt: 2021-09-26T09:00:19.999Z

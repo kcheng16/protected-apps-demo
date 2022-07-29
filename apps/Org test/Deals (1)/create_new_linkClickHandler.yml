@@ -1,0 +1,98 @@
+id: create_new_linkClickHandler
+type: datasource
+subtype: RESTQuery
+resourceName: c5971875-7342-429f-a4ed-d02c98d6bb04
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: >-
+        [{"key":"alias","value":"{{alias}}"},{"key":"type","value":"1"},{"key":"data","value":"{{branch_data}}"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: url
+    - playgroundQueryUuid: 17061cc2-8533-44f6-a57b-7959b0d6cf1b
+    - playgroundQueryId: 14
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered:
+          - alias: '{{link_alias.value}}'
+          - branch_data: |-
+              {
+                 “$og_title”:“Download the WithU App now”,
+                 “$og_description”:“A fitness app like no other. Bringing audio-led personal training to your workouts.“,”$og_image_url”:“https://www.withutraining.com/img/mobile-tag.jpg”,
+                 “$desktop_url”:“{{link_destination_desktop.value}}“,
+                  “$android_url”: “{{link_destination_android_edit.value}}“,
+                  “$ios_url”: “{{link_destination_ios_edit.value}}“,
+                 “$marketing_title”:“{{link_title.value}}“,
+                 “$web_only”: true
+              }
+    - isImported: true
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: add_link_firestore
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-08-24T18:19:03.362Z
+folder: Links

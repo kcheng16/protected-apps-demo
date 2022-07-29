@@ -1,0 +1,31 @@
+id: active_deal_info
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{is_live.value === false}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: Active deals
+    - type: success
+    - exportFileName: ''
+    - description: |
+        When deals are active new users are able to avail of the deal contents 
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: deal_setup
+    row: 0.7999999999999998
+    height: 2
+    width: 12
+createdAt: 2021-09-22T11:39:27.944Z

@@ -1,0 +1,27 @@
+id: add_domain_transformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        let data={{deal_list.selectedRow.data}}
+
+        let domain={{domain_input.value}}
+
+        var arr=[]
+
+        if (data.domains) {
+          arr=data.domains
+        }
+
+        arr.push(domain)
+
+        return arr
+    - value: ''
+createdAt: 2021-08-31T15:51:42.711Z
+folder: Domains

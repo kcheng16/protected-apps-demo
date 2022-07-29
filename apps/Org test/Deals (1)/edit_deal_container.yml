@@ -1,0 +1,86 @@
+id: edit_deal_container
+type: widget
+subtype: TabbedContainerWidget
+template:
+  ordered:
+    - heightType: auto
+    - spinWhenChildrenAreFetching: true
+    - unmountInactiveTabs: false
+    - hidden: ''
+    - tabNames: >-
+        ["Offer","Domains","Links","In
+        app","MyWithU","Codes","Stats","CRM","Data sharing","Admin"]
+    - selectedTabIndex: 0
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: codes_for_deal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: ''
+            - enabled: '{{edit_deal_container.selectedTab === "5"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_users
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: workouts
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_all_users
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "6"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: link_value
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{edit_deal_container.selectedTab === "8"}}'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_deal_batch
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - selectedTab: '"0"'
+    - showTabBar: true
+    - disableAnimation: true
+    - overflowType: hidden
+    - disabled: '{{deal_list.selectedRow.data === undefined}}'
+style:
+  ordered: []
+position2:
+  position2:
+    row: 11.000000000000002
+    height: 13.8
+    width: 12
+createdAt: 2021-08-17T21:25:41.888Z

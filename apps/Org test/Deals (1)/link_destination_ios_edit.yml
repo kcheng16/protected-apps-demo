@@ -1,0 +1,22 @@
+id: link_destination_ios_edit
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        if ({{my_withu_toggle.value == true && retoolContext.environment ===
+        "staging"}}) {
+          return "https://my.dev.withutraining.com/";
+        } 
+
+        if ({{my_withu_toggle.value == true && retoolContext.environment ===
+        "production"}}) {
+          return "https://my.withutraining.com/";
+        }
+
+        else  {return
+        "https://apps.apple.com/gb/app/withu-audio-fitness-app/id1487259038"
+              }
+    - value: ''
+createdAt: 2021-10-31T10:24:56.521Z
+folder: Links

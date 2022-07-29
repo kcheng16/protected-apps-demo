@@ -1,0 +1,52 @@
+id: url_description
+type: widget
+subtype: TextAreaWidget
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - autoResize: true
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - minLines: 2
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - tooltipText: Title shown when link is shared on Social media
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{branchlist.data.data.$og_description}}'
+    - labelCaption: ''
+    - labelWidth: '40'
+    - autoFill: ''
+    - placeholder: >-
+        A fitness app like no other. Bringing audio-led personal training to
+        your workouts.
+    - label: Marketing description
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - minLength: null
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - maxLines: null
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    row: 3
+    height: 1
+    width: 12
+createdAt: 2021-10-11T13:23:07.353Z

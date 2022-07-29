@@ -1,0 +1,33 @@
+id: delete_domain_transformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        let domain = {{list_of_domains.value}}
+
+        let data={{deal_list.selectedRow.data}}
+
+        var arr=[]
+
+        if (data.domains) {
+          arr=data.domains
+        }
+
+        let index = arr.findIndex((i) => i == domain);
+
+        if(index > -1){
+          arr.splice(index, 1)
+        }
+
+        console.log(index)
+
+        return arr
+    - value: ''
+createdAt: 2021-08-31T16:02:20.373Z
+folder: Domains

@@ -1,0 +1,15 @@
+id: offering_generator
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{enable_offer_payload.value}} === true) {
+        return {{deal_list.selectedRow.data.subscription.offering}}
+        } 
+          else  {
+          return ""
+        }
+    - value: ''
+createdAt: 2021-10-11T13:05:46.271Z
+folder: Links

@@ -1,0 +1,54 @@
+id: link_url
+type: widget
+subtype: EditableTextWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: 'true'
+    - iconAfter: ''
+    - editIcon: edit
+    - inputValue: ''
+    - autoComplete: false
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - patternType: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textSize: default
+    - textAfter: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - showClear: false
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{branchlist.data.data[''+url'']}}'
+    - labelCaption: ''
+    - labelWidth: '30'
+    - autoFill: ''
+    - placeholder: '{{branchlist.data.data[''+url'']}}'
+    - label: Link URL
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: bold/interface-link
+    - minLength: null
+    - inputTooltip: ''
+    - events: []
+    - autoCapitalize: none
+    - loading: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    height: 1
+    width: 10
+createdAt: 2021-09-25T20:21:49.430Z

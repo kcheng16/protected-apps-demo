@@ -1,0 +1,14 @@
+id: image_upload_icon
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{upload_image.isFetching == true  }}) {
+          return "⌛";
+        } 
+        else  {return "🗑️"
+              }
+    - value: ''
+createdAt: 2021-10-31T10:36:22.620Z
+folder: Links

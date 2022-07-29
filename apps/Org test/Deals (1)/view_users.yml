@@ -1,0 +1,28 @@
+id: view_users
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'TRUE'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: 80%
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: View all users
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    col: 3
+    height: 1
+    width: 3
+    tabNum: 9
+createdAt: 2021-10-09T18:52:36.391Z

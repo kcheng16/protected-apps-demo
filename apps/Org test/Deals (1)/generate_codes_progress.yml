@@ -1,0 +1,31 @@
+id: generate_codes_progress
+type: widget
+subtype: ProgressBarWidget
+template:
+  ordered:
+    - hideOutput: false
+    - hidden: '{{get_deal_batch.data === null || !get_deal_batch.data.running }}'
+    - showInEditor: false
+    - _defaultValue: 0
+    - tooltipText: ''
+    - labelAlign: left
+    - value: '{{fetching_codes.value}}'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - label: >-
+        {{get_deal_batch.data.generated_codes}} /
+        {{get_deal_batch.data.requested_codes}}
+    - labelWidthUnit: '%'
+    - indeterminate: true
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: create_codes
+    row: 5.4
+    height: 0.4
+    width: 10
+createdAt: 2022-01-04T16:03:08.713Z

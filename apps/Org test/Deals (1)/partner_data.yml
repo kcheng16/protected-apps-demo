@@ -1,0 +1,27 @@
+id: partner_data
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let data;
+
+        if({{!custom_redemption_page.value}}) {
+          data = {};
+        } else {
+          data = {
+            "external_partner": {
+              "theme_color": {{theme_color.value}},
+              "partner_text": {{partner_text.value}},
+              "dark_header": {{dark_header.value}}
+            }
+          };
+        }
+
+        return {"redeem": {
+                            "subtitle": "{{my_withu_subtitle_redemption.value}}",
+                            "title": "{{my_withu_title_redemption.value}}",
+                        }};
+    - value: ''
+createdAt: 2022-04-28T11:20:40.581Z
+folder: MyWithU

@@ -1,0 +1,66 @@
+id: my_withu_logo
+type: widget
+subtype: FileInputWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - iconAfter: ''
+    - parseFiles: false
+    - maxSize: 1mb
+    - selectionType: single
+    - accept: '[''jpg'',''png'']'
+    - hidden: ''
+    - customValidation: >-
+        {{my_withu_logo.files.length > 0 || MyWithULocalisedData.value.logo ? ''
+        : 'Logo is required.'}}
+    - maxCount: null
+    - hideValidationMessage: false
+    - textBefore: Browse
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - parsing: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - minSize: ''
+    - placeholder: '{{MyWithULocalisedData.value.logo}}'
+    - label: Logo (Must be PNG or JPG)
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: cloud-upload
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: mywithu_logo_upload
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - minCount: null
+    - labelWrap: true
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 9.8
+    height: 1
+    width: 8
+createdAt: 2021-08-18T10:11:23.820Z

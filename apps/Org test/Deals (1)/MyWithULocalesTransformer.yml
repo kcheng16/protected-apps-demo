@@ -1,0 +1,9 @@
+id: MyWithULocalesTransformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: "// let data = {{deal_list.selectedRow.data}}; \n// let object = data.web.content; \n\n\n// var web_content_keys = Object.keys(object);\n// var all_languages = ['en', 'es', 'pt']\n// var present_languages = []\n\n// for(const key of web_content_keys){\n//   if(all_languages.includes(key)){\n//     \tpresent_languages.push(key)\n//   }\n// }\n\n// if(present_languages.length == 0){\n//   present_languages = ['en']\n// }\n// //locale_drop_down.values = present_languages; \n\n// return present_languages\n\nvar all_locales = ['en', 'es']\nreturn all_locales"
+    - value: ''
+createdAt: 2022-01-11T11:30:10.932Z
+folder: MyWithU

@@ -1,0 +1,34 @@
+id: corp_free_info
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{deal_type_picker.value != 3}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: Warning
+    - type: warning
+    - exportFileName: ''
+    - description: >-
+        No payment information will be taken from the user. Any user attached to
+        this deal will benefit from unlimited free WithU access. Please note
+        that redemption can only be guaranteed via MyWithU enabled links, Domain
+        based provisioning or code redemption.
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: web_offer
+    row: 3.8
+    height: 3.2
+    width: 12
+createdAt: 2021-09-16T10:33:54.610Z

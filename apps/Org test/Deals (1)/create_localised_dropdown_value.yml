@@ -1,0 +1,12 @@
+id: create_localised_dropdown_value
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |
+        var locale = {{selected_locale_dropdown.value}}
+            
+        return locale
+    - value: ''
+createdAt: 2022-01-13T10:08:59.852Z
+folder: deal_localisation

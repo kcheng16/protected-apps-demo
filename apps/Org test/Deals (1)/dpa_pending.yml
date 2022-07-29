@@ -1,0 +1,34 @@
+id: dpa_pending
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{check_dpa_state.value != 2}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: DPA Pending
+    - type: info
+    - exportFileName: ''
+    - description: |-
+        DPA has been sent to client for review.
+        We must not share data with client until this doccument is in place
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 1.6000000000000008
+    col: 8
+    height: 2.4
+    width: 4
+    tabNum: 8
+createdAt: 2021-09-13T22:07:01.571Z

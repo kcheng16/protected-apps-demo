@@ -1,0 +1,22 @@
+id: link_destination_android_edit
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        if ({{my_withu_toggle.value == true && retoolContext.environment ===
+        "staging"}}) {
+          return "https://my.dev.withutraining.com/";
+        } 
+
+        if ({{my_withu_toggle.value == true && retoolContext.environment ===
+        "production"}}) {
+          return "https://my.withutraining.com/";
+        }
+
+        else  {return
+        "https://play.google.com/store/apps/details?id=fit.withu.flutter.withu"
+              }
+    - value: ''
+createdAt: 2021-10-31T10:27:48.988Z
+folder: Links

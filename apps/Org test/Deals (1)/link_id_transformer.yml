@@ -1,0 +1,27 @@
+id: link_id_transformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        let data={{deal_list.selectedRow.data}}
+
+        let link={{create_new_linkClickHandler.data.url}}
+
+        var arr=[]
+
+        if (data.links) {
+          arr=data.links
+        }
+
+        arr.push(link)
+
+        return arr
+    - value: ''
+createdAt: 2021-08-31T20:03:35.003Z
+folder: Links

@@ -1,0 +1,51 @@
+id: dpa_upload
+type: widget
+subtype: FileDropzoneWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - parseFiles: false
+    - maxSize: ''
+    - selectionType: single
+    - accept: '["PDF"]'
+    - hidden: false
+    - customValidation: ''
+    - maxCount: null
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - parsing: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - minSize: ''
+    - placeholder: Select or drag and drop a PDF file
+    - label: Label
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: upload
+    - events:
+        ordered: []
+    - loading: ''
+    - disabled: false
+    - labelPosition: left
+    - minCount: null
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpa_upload_container
+    height: 3.8
+    width: 12
+createdAt: 2021-09-13T22:26:19.574Z

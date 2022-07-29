@@ -1,0 +1,14 @@
+id: data_permisions_generator_email
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{email_dpa_auto.value === true}}) {
+          return "Email data";
+        } 
+        else  {return ""
+              }
+    - value: ''
+createdAt: 2021-11-07T06:25:08.968Z
+folder: Data_Sharing

@@ -1,0 +1,30 @@
+id: text32
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: right
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: >-
+        {{retoolContext.environment === 'production' ?
+        get_user_count_deal_prod.data.f0_ : get_user_count_deal_dev.data.f0_}}
+        users on this deal
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: deal_setup
+    row: 8.8
+    col: 3
+    height: 0.6
+    width: 9
+createdAt: 2022-04-19T10:17:12.501Z

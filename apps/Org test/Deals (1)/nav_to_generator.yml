@@ -1,0 +1,21 @@
+id: nav_to_generator
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{deeplink_to.value}} === "trainer") {
+        return {{deeplink_to.value}}+"/"+{{trainer_picker.value}}
+        } else if ({{deeplink_to.value}} === "workout") {
+          return {{deeplink_to.value}}+"/"+{{workout_picker.value}}
+        } else if ({{deeplink_to.value}} === "collection")  {
+          return {{deeplink_to.value}}+"/"+{{collection_picker.value}}
+        } else if ({{deeplink_to.value}} === "programme")  {
+          return {{deeplink_to.value}}+"/"+{{programme_picker.value}}
+        } 
+          else  {
+          return ""
+        }
+    - value: ''
+createdAt: 2021-09-21T17:52:05.719Z
+folder: Links

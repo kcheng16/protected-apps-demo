@@ -1,0 +1,65 @@
+id: button1
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Add Entitlements
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: grantEntitlements
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{entitlement_duration.value != null}}'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: addEntitlementsModal
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{entitlement_duration.value != null}}'
+        - ordered:
+            - event: click
+            - type: script
+            - method: run
+            - pluginId: ''
+            - params:
+                ordered:
+                  - src: |-
+                      utils.showNotification({
+                        title: 'Error',
+                        description: 'Please enter an entitlement duration.'
+                      });
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{entitlement_duration.value == null}}'
+    - loading: ''
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addEntitlementsModal
+    row: 3.8000000000000003
+    height: 1
+    width: 12
+createdAt: 2021-12-22T11:18:28.782Z

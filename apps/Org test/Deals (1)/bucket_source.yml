@@ -1,0 +1,14 @@
+id: bucket_source
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{retoolContext.environment === "staging"}}) {
+          return "wu-legal-stage";
+        } 
+        else  {return "withu-legal-prod"
+              }
+    - value: ''
+createdAt: 2021-11-05T11:06:21.893Z
+folder: Data_Sharing

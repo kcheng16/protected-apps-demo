@@ -1,0 +1,28 @@
+id: text18
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - _defaultValue: ''
+    - tooltipText: ''
+    - value: >-
+        Completed: {{get_grant_progress.data.data.succeded}} - Failed:
+        {{get_grant_progress.data.data.failed}}
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: grant_log
+    row: 1.2
+    height: 0.8
+    width: 12
+createdAt: 2022-01-14T13:13:36.044Z

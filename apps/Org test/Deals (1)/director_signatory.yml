@@ -1,0 +1,66 @@
+id: director_signatory
+type: widget
+subtype: SegmentedControlWidget
+template:
+  ordered:
+    - _disabledByIndex: []
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - _iconByIndex: []
+    - hidden: '{{company_location.value === false}}'
+    - customValidation: ''
+    - data: '[true, false]'
+    - hideValidationMessage: false
+    - selectedItem: null
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: null
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: 'false'
+    - labelCaption: ''
+    - hideLabel: false
+    - labelWidth: '33'
+    - deprecatedLabels: ''
+    - label: Will a company officer sign?
+    - _hasMigratedNestedItems: true
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - invalid: false
+    - selectedIndex: null
+    - selectedLabel: ''
+    - events:
+        - ordered:
+            - event: change
+            - type: widget
+            - method: clearValue
+            - pluginId: signatory_full_name
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - _ids: []
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex: []
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: true
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - required: false
+    - labels: '{{ [''Yes'', ''No''][i] }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpa_contact_form
+    height: 0.8
+    width: 12
+createdAt: 2021-10-03T15:11:47.754Z

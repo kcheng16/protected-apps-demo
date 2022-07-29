@@ -1,0 +1,66 @@
+version: 43.0.9
+pageUuid: 21a1ce60-ff9e-11eb-b93b-6fa8e263fc1d
+appTemplate:
+  urlFragmentDefinitions:
+    - ordered:
+        - name: deal_id
+        - value: '{{deal_list.selectedRow.data._id}}'
+  appThemeId: 1
+  folders:
+    - Domains
+    - Links
+    - Stats
+    - Data_Sharing
+    - Codes
+    - Offer
+    - deal_metadata
+    - new_deal_resources
+    - in_app
+    - MyWithU
+    - crm
+    - Entitlements
+    - Users
+    - JSONManagement
+    - BigQuery
+    - Temporary state
+  preloadedAppJavaScript: |-
+    function updateDealRow(table, getDealQuery, dealsDetailsTable) {
+      let newData = table.data;
+
+    getDealQuery.trigger({
+      onSuccess: function (data) {
+        newData.forEach(function (row) {
+          if (row._id === table.selectedRow.data._id) {
+            row = data[0];
+          }
+        });
+
+        table.setData(newData);
+        
+        dealsDetailsTable.trigger();
+      },
+      onFailure: function (error) {
+        utils.showNotification({
+          title: "Update Failed",
+          description: "Could not update deals table rows.",
+        });
+      },
+    });
+    }
+  pageLoadValueOverrides:
+    - ordered:
+        - name: deal_list.selectedIndex
+        - value: '{{deal_list.data.findIndex((d) => d._id == urlparams.hash.deal_id)}}'
+  experimentalPerfFeatures:
+    object:
+      batchCommitModelEnabled: false
+      skipDepCycleCheckingEnabled: false
+      serverDepGraphEnabled: false
+  rootScreen: null
+  customDocumentTitleEnabled: true
+  version: 2.93.9
+  customShortcuts:
+    array:
+      - object:
+          shortcut: ''
+          action: ''

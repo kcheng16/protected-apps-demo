@@ -1,0 +1,48 @@
+id: number_of_workouts_completed
+type: widget
+subtype: StatisticWidget2
+template:
+  ordered:
+    - positiveTrend: false
+    - signDisplay: auto
+    - secondaryCurrency: ''
+    - secondarySuffix: ''
+    - align: left
+    - secondaryPrefix: ''
+    - secondaryEnableTrend: false
+    - secondaryDecimalPlaces: null
+    - hidden: null
+    - showSeparators: false
+    - formattingStyle: decimal
+    - showInEditor: null
+    - secondaryPositiveTrend: false
+    - tooltipText: ''
+    - currency: ''
+    - value: '{{get_workouts_start_completed?.data?.Completed ?? 0}}'
+    - style:
+        ordered: []
+    - secondarySignDisplay: auto
+    - suffix: ''
+    - labelCaption: ''
+    - prefix: ''
+    - secondaryPadDecimal: false
+    - label: Workouts completed
+    - secondaryFormattingStyle: decimal
+    - icon: ''
+    - enableTrend: false
+    - secondaryValue: null
+    - decimalPlaces: '0'
+    - padDecimal: true
+    - maintainSpaceWhenHidden: null
+    - secondaryShowSeparators: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 1.2
+    col: 6
+    height: 2
+    width: 2
+    tabNum: 6
+createdAt: 2021-09-22T08:00:53.694Z

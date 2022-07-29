@@ -1,0 +1,32 @@
+id: corp_free_info3
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{deal_type_picker.value != 2}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: Warning
+    - type: warning
+    - exportFileName: ''
+    - description: >-
+        This method is works for MyWithU/Domains only. Any links that are not
+        directed to MyWithU will show standard pricing.
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: web_offer
+    row: 7
+    height: 2
+    width: 12
+createdAt: 2021-09-25T15:52:50.154Z

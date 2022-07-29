@@ -1,0 +1,18 @@
+id: signatory_name_value
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >+
+        if ({{company_location.value === true && director_signatory.value ===
+        true}}) {
+          return {{company_officer_select.value}} ;
+        } 
+
+        else  {return {{signatory_full_name.value}}
+              }
+
+
+    - value: ''
+createdAt: 2021-11-07T11:39:19.555Z
+folder: Data_Sharing

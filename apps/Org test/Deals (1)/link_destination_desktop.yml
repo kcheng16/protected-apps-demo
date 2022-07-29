@@ -1,0 +1,15 @@
+id: link_destination_desktop
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{retoolContext.environment === "staging"}}) {
+          return "https://my.dev.withutraining.com/";
+        } 
+        if ({{retoolContext.environment === "production"}}) {
+          return "https://my.withutraining.com/";
+        }
+    - value: ''
+createdAt: 2021-11-04T12:16:55.991Z
+folder: Links

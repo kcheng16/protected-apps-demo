@@ -1,0 +1,14 @@
+id: fitness_data_viewer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{deal_list.selectedRow.data.dpa.properties.fitness === true}}) {
+          return "✅";
+        } 
+        else  {return "❌"
+              }
+    - value: ''
+createdAt: 2021-11-07T12:11:28.692Z
+folder: Data_Sharing

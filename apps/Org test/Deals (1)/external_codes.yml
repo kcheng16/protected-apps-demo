@@ -1,0 +1,17 @@
+id: external_codes
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let csv = {{csv_upload.parsedValue[0]}};
+        let codes = [];
+
+        for(const row of csv) {
+          codes.push(row[{{code_csv_column.value}}]);
+        }
+
+        return codes;
+    - value: ''
+createdAt: 2022-04-26T14:06:57.065Z
+folder: Codes

@@ -1,0 +1,31 @@
+id: stats_select_dates
+type: widget
+subtype: DateRangePickerWidget
+template:
+  ordered:
+    - minDate: ''
+    - startFormattedString: null
+    - formattedString: null
+    - startValue: '{{get_last_date.value}}'
+    - tooltipText: ''
+    - startPlaceholder: ''
+    - endFormattedString: null
+    - maxDate: '{{Date()}}'
+    - label: Select dates
+    - endValue: '{{Date()}}'
+    - labelMaxWidth: ''
+    - labelPlacedOnLeft: false
+    - format: YYYY-MM-DD
+    - endPlaceholder: ''
+    - onSelect: ''
+    - disabled: ''
+    - useLocalTimezone: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    height: 1
+    width: 5
+    tabNum: 6
+createdAt: 2021-09-14T07:04:07.746Z

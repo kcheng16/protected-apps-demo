@@ -1,0 +1,11 @@
+id: deal_localisation_transformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        var locales = ['en', 'es', 'pt'];
+        return locales;
+    - value: ''
+createdAt: 2022-01-13T09:41:45.064Z
+folder: deal_localisation

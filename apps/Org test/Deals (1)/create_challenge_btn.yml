@@ -1,0 +1,41 @@
+id: create_challenge_btn
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: check
+    - submitTargetId: null
+    - hidden: false
+    - text: Create Challenge
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: getLastChallengeId
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: create_challenge_modal
+    row: 3.4
+    col: 3
+    height: 1
+    width: 6
+createdAt: 2022-06-09T17:15:43.784Z

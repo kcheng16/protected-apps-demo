@@ -1,0 +1,120 @@
+id: generate_codes_trigger
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: |
+        let queryRun = false;
+        let running = false;
+
+        let genTimer = setInterval(function () {
+          get_deal_batch.trigger({
+            onSuccess: function (data) {
+              if (data.running || running) {
+                clearInterval(genTimer);
+              }
+            },
+            onFailed: function (data) {
+              clearInterval(genTimer);
+            },
+          });
+        }, 1000);
+
+        setTimeout(function () {
+          clearInterval(genTimer);
+        }, 5000);
+
+        if (custom_code.value === false || burnable_control.value === true) {
+          if (!queryRun) {
+            generate_codes_bulk.trigger({
+              onSuccess: function (data) {
+                clearInterval(genTimer);
+              },
+              onFailed: function (data) {
+                clearInterval(genTimer);
+              },
+            });
+            queryRun = true;
+          }
+        } else {
+          insert_custom_code.trigger({
+            onSuccess: function (data) {
+              running = true;
+              if (data.success) {
+                utils.showNotification({
+                  title: "Success!",
+                  description: "Code was added successfully to deal.",
+                });
+                clearInterval(genTimer);
+              } else {
+                utils.showNotification({
+                  title: "Error",
+                  description: "This code already exists for the selected deal.",
+                });
+                clearInterval(genTimer);
+              }
+            },
+          });
+        }
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: ''
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events: []
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2022-01-04T16:37:04.043Z
+folder: Codes

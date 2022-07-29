@@ -1,0 +1,31 @@
+id: navigation
+type: widget
+subtype: NavigationWidget
+template:
+  ordered:
+    - horizontalAlign: center
+    - valueToCopy: ''
+    - menuItems: []
+    - srcFromUrl: true
+    - internalUrlHashParams: ''
+    - exportFileType: csv
+    - logoImageFile: ''
+    - buttonType: internal-url
+    - exportTemplate: null
+    - url: ''
+    - newWindow: false
+    - logoImageSrc: https://storage.googleapis.com/wu-data-web/wul.png
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - exportFileName: ''
+    - disabled: ''
+style:
+  ordered: []
+position2:
+  position2:
+    subcontainer: header
+    height: 1
+    width: 7
+createdAt: 2021-08-18T13:52:04.107Z

@@ -1,0 +1,94 @@
+id: get_single_deal
+type: datasource
+subtype: FirebaseQuery
+resourceName: 0d4ce929-fb5a-4163-98b4-f83d95b31c4f
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: 385
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: ''
+    - playgroundQueryUuid: aec371d3-bffd-4bd5-b45e-70225e4c4737
+    - playgroundQueryId: 98
+    - privateParams: []
+    - firestoreCollection: deals
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered:
+          - dealID: '{{deal_list.selectedRow.data._id}}'
+    - isImported: true
+    - endAt: ''
+    - firebaseService: firestore
+    - showSuccessToaster: true
+    - equalTo: ''
+    - cacheKeyTtl: ''
+    - metadata: null
+    - uid: ''
+    - editorMode: gui
+    - actionType: getByIdFirestore
+    - changesetObject: ''
+    - setDbValue: ''
+    - value: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - filterType: ''
+    - rawData: null
+    - userOptions: ''
+    - docId: '{{dealID}}'
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - ordering: ''
+    - startAt: ''
+    - limitType: ''
+    - showLatestVersionUpdatedWarning: false
+    - dbRef: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - phoneNumber: ''
+    - nextPageToken: ''
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events: []
+    - queryTimeout: '10000'
+    - useRawCollectionId: true
+    - firestoreOrderBy: ''
+    - requireConfirmation: false
+    - orderByChildValue: ''
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - limit: ''
+    - enableCaching: false
+    - firestoreOrderDirection: ''
+    - allowedGroups: []
+    - firestoreWhere: ''
+    - email: ''
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2022-02-16T13:12:37.783Z
+folder: deal_localisation

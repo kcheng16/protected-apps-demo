@@ -1,0 +1,59 @@
+id: deal_type_picker
+type: widget
+subtype: SegmentedControlWidget
+template:
+  ordered:
+    - _disabledByIndex: []
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item }}'
+    - _iconByIndex: []
+    - hidden: ''
+    - customValidation: ''
+    - data: '[1, 2, 3]'
+    - hideValidationMessage: false
+    - selectedItem: null
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: null
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{offer_check.data}}'
+    - labelCaption: ''
+    - labelWidth: ''
+    - deprecatedLabels: ''
+    - label: Type of deal
+    - _hasMigratedNestedItems: true
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - invalid: false
+    - selectedIndex: null
+    - selectedLabel: ''
+    - events:
+        ordered: []
+    - _ids: []
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex: []
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: true
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - required: false
+    - labels: >-
+        {{ ['Free period/In app purchase',"Free period with
+        card","Corporate/Free forever "][i] }}
+style:
+  ordered: []
+position2:
+  position2:
+    container: web_offer
+    height: 0.8
+    width: 12
+createdAt: 2021-08-18T13:46:25.991Z

@@ -1,0 +1,17 @@
+id: code_import_count
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let csv = {{csv_upload.parsedValue[0]}};
+        let count = 0;
+
+        for(const row of csv) {
+          if(row[{{code_csv_column.value}}]) count ++;
+        }
+
+        return count;
+    - value: ''
+createdAt: 2022-04-26T12:03:44.976Z
+folder: Codes

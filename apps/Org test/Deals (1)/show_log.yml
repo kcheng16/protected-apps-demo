@@ -1,0 +1,43 @@
+id: show_log
+type: widget
+subtype: CheckboxWidget2
+template:
+  ordered:
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: 'false'
+    - labelCaption: ''
+    - label: Show latest log
+    - _validate: false
+    - invalid: false
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_transfer_progress
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - disabled: '{{get_transfer_progress.data.error != null}}'
+    - labelPosition: right
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: transfer_user_modal
+    row: 4
+    height: 0.6
+    width: 5
+createdAt: 2022-01-19T16:58:33.985Z

@@ -1,0 +1,50 @@
+id: partner_text
+type: widget
+subtype: TextAreaWidget
+template:
+  ordered:
+    - spellCheck: true
+    - readOnly: false
+    - autoResize: true
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: '100'
+    - hidden: '{{!custom_redemption_page.value}}'
+    - customValidation: ''
+    - hideValidationMessage: false
+    - minLines: 2
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{MyWithULocalisedData.value.external_partner.partner_text}}'
+    - labelCaption: ''
+    - labelWidth: '40'
+    - autoFill: ''
+    - placeholder: Promo Textbox
+    - label: Promo Textbox
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - minLength: null
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - maxLines: null
+    - loading: false
+    - disabled: false
+    - labelPosition: top
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_my_withu
+    row: 13.4
+    height: 1
+    width: 8
+createdAt: 2022-04-28T09:09:16.778Z

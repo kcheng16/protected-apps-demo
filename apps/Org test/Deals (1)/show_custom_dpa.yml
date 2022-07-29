@@ -1,0 +1,33 @@
+id: show_custom_dpa
+type: widget
+subtype: SwitchWidget2
+template:
+  ordered:
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{deal_list.selectedRow.data.data_sharing.copy != undefined}}'
+    - labelCaption: ''
+    - label: Show custom data sharing agrement?
+    - _validate: false
+    - invalid: false
+    - events: []
+    - disabled: false
+    - labelPosition: right
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: in_product_data_options
+    height: 0.6
+    width: 6
+createdAt: 2021-11-04T07:37:39.697Z

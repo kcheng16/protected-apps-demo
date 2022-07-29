@@ -1,0 +1,43 @@
+id: copy_code
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Copy code
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: util
+            - method: copyToClipboard
+            - pluginId: ''
+            - params:
+                ordered:
+                  - value: '{{list_codes_deal.selectedRow.data.code}}'
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{list_codes_deal.selectedRow.data.code.length > 1}}'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: '{{list_codes_deal.selectedRow.data == null}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 10
+    col: 3
+    height: 1
+    width: 3
+    tabNum: 5
+createdAt: 2021-11-09T08:31:09.932Z

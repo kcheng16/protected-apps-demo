@@ -1,0 +1,9 @@
+id: offer_builder
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: "if ({{deal_type_picker.value}} === 1 & {{free_period_toggle.value}} ==true) {\nreturn  {\n        requires_payment: false,\n  \t\t\toffering: {{free_period_rc.value}},\n  \t\t\tpersisted_offering: {{offer_after.value}},\n  \t\t\tshow_pricing_after: {{show_future_pricing.value}}\n    } \n  \n  } else if ({{deal_type_picker.value}} === 1 & {{free_period_toggle.value}} ==false) {\n  return {\n        requires_payment: false,\n    \t\toffering: {{offering.value}},\n    \t\tshow_pricing_after: {{show_future_pricing.value}}\n    } \n  \n  \n} else if ({{deal_type_picker.value}} === 2) {\n  return {\n        requires_payment: true,\n    \t\tcoupon: {{price_after_free.value.id}},\n    \t\tdiscount_percent: {{price_after_free.value.percent}},\n    \t\ttrial_days: {{free_trial_days.value}},\n    \t\tshow_pricing_after: {{show_future_pricing.value}}\n    } \n   \n} else if ({{deal_type_picker.value}} === 3)  {\n  return   {\n        requires_payment: false,\n  \t\t\toffering: \"free_lifetime\"\n    }\n  \n} "
+    - value: ''
+createdAt: 2021-09-25T08:45:14.298Z
+folder: Offer

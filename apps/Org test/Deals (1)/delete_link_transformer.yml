@@ -1,0 +1,33 @@
+id: delete_link_transformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        let links = {{current_deal_links.value}}
+
+        let data={{deal_list.selectedRow.data}}
+
+        var arr=[]
+
+        if (data.links) {
+          arr=data.links
+        }
+
+        let index = arr.findIndex((i) => i == links);
+
+        if(index > -1){
+          arr.splice(index, 1)
+        }
+
+        console.log(index)
+
+        return arr
+    - value: ''
+createdAt: 2021-09-21T17:16:02.598Z
+folder: Links

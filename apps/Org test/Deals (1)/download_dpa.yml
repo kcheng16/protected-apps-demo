@@ -1,0 +1,52 @@
+id: download_dpa
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: '{{check_dpa_state.value != 3}}'
+    - text: Download DPA
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: dl_dpa
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{deal_list.selectedRow.data.dpa.dpa_manual === true}}'
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: download_eversign_doc
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: '{{deal_list.selectedRow.data.dpa.dpa_manual === false}}'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 8.400000000000002
+    col: 8
+    height: 1
+    width: 4
+    tabNum: 8
+createdAt: 2021-11-05T11:56:07.510Z

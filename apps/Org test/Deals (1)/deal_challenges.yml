@@ -1,0 +1,76 @@
+id: deal_challenges
+type: widget
+subtype: ListboxWidget
+template:
+  ordered:
+    - imageByIndex: ''
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex: ''
+    - values: '{{ item._id }}'
+    - _iconByIndex: []
+    - allowDeselect: false
+    - hidden: false
+    - customValidation: ''
+    - data: '{{ getChallengesForDeal.data }}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex: '{{ item.title }}'
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - showInEditor: false
+    - _defaultValue: null
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{ self.values[0] }}'
+    - hiddenByIndex: ''
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex: []
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - searchTerm: ''
+    - label: Challenges for Deal
+    - _hasMigratedNestedItems: true
+    - captionByIndex: ''
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex: ''
+    - colorByIndex: '{{ item.gradient_end }}'
+    - selectedLabel: ''
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: ''
+    - disabled: false
+    - labelPosition: top
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex: ''
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ item.title }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    height: 15.8
+    width: 3
+    tabNum: 10
+createdAt: 2022-06-09T16:37:41.148Z

@@ -1,0 +1,40 @@
+id: coppy_link
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: ''
+    - hidden: false
+    - text: Copy link
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: util
+            - method: copyToClipboard
+            - pluginId: ''
+            - params:
+                ordered:
+                  - value: '{{link_url.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    col: 10
+    height: 0.8
+    width: 2
+createdAt: 2021-11-02T19:20:46.720Z

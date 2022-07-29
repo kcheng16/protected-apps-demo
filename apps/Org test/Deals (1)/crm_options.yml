@@ -1,0 +1,32 @@
+id: crm_options
+type: widget
+subtype: ToggleListWidget
+template:
+  ordered:
+    - toggles:
+        - ordered:
+            - label: Enable mainline CRM
+            - description: Should users in this deal receive CRM messages
+            - value: '{{deal_list.selectedRow.data.crm.master}}'
+            - tags: ''
+            - toggleOnQuery: update_crm
+            - toggleOffQuery: update_crm
+            - disabled: ''
+        - ordered:
+            - label: Frends & Family
+            - description: Enable Freinds & Family offer
+            - tags: ''
+            - value: '{{deal_list.selectedRow.data.crm.ff}}'
+            - disabled: 'false'
+            - toggleOnQuery: update_crm
+            - toggleOffQuery: update_crm
+    - heightType: fixed
+    - overflowType: visible
+style:
+  ordered: []
+position2:
+  position2:
+    container: crm_tabs
+    height: 6
+    width: 12
+createdAt: 2021-09-13T21:21:42.487Z

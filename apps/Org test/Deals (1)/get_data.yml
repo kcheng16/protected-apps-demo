@@ -1,0 +1,71 @@
+id: get_data
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Get data
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: get_users
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: >-
+                {{stats_select_dates.endFormattedString.length >0 &&
+                stats_select_dates.startFormattedString.length >0}}
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: workouts
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: >-
+                {{stats_select_dates.endFormattedString.length >0 &&
+                stats_select_dates.startFormattedString.length >0}}
+        - ordered:
+            - event: click
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: info
+                        - title: Please select a start & end date
+            - waitType: debounce
+            - waitMs: '0'
+            - enabled: >-
+                {{stats_select_dates.endFormattedString.length === 0 &&
+                stats_select_dates.startFormattedString.length === 0}}
+    - loading: '{{get_users.isFetching|| workouts.isFetching}}'
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    col: 5
+    height: 1
+    width: 2
+    tabNum: 6
+createdAt: 2021-11-07T16:19:46.873Z

@@ -1,0 +1,32 @@
+id: dpa_not_inpace
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{check_dpa_state.value != 1}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: DPA Not in place
+    - type: error
+    - exportFileName: ''
+    - description: We must not share PII with client until this doccument is in place
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 6.4
+    col: 8
+    height: 2
+    width: 4
+    tabNum: 8
+createdAt: 2021-09-13T17:54:22.014Z

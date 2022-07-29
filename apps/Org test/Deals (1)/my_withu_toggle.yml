@@ -1,0 +1,102 @@
+id: my_withu_toggle
+type: widget
+subtype: SwitchWidget2
+template:
+  ordered:
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - _defaultValue: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{branchlist.data.data.$web_only ?? false}}'
+    - labelCaption: Enable our web onboarding journey for mobile devices
+    - labelWidth: '40'
+    - label: Enable MyWithU on mobile devices
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - events:
+        - ordered:
+            - event: 'true'
+            - type: widget
+            - method: setValue
+            - pluginId: deeplink_to
+            - params:
+                ordered:
+                  - value: ''
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: 'true'
+            - type: widget
+            - method: setValue
+            - pluginId: trainer_picker
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: 'true'
+            - type: widget
+            - method: setValue
+            - pluginId: workout_picker
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: 'true'
+            - type: widget
+            - method: setValue
+            - pluginId: collection_picker
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: 'true'
+            - type: widget
+            - method: setValue
+            - pluginId: programme_picker
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: 'true'
+            - type: widget
+            - method: setValue
+            - pluginId: enable_offer_payload
+            - params:
+                ordered:
+                  - value: 'false'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: 'false'
+            - type: widget
+            - method: setValue
+            - pluginId: my_withu_branded_code_redemption
+            - params:
+                ordered:
+                  - value: 'false'
+            - waitType: debounce
+            - waitMs: '0'
+    - disabled: false
+    - labelPosition: right
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: link_editor
+    row: 8
+    height: 0.6
+    width: 12
+createdAt: 2021-08-18T08:36:03.525Z

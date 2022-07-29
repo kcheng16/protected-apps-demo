@@ -1,0 +1,59 @@
+id: edit_my_withu
+type: widget
+subtype: FormWidget
+template:
+  ordered:
+    - heightType: auto
+    - spinWhenChildrenAreFetching: true
+    - clearFormAfterSubmit: false
+    - requireValidFormForSubmit: true
+    - showBorder: true
+    - data: ''
+    - showDropShadow: true
+    - submitButtonFullWidth: false
+    - submitDisabled: ''
+    - submitButtonText: Save
+    - onSubmit: ''
+    - requiredFormControls: []
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: update_mywithu_localised_new
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: submit
+            - type: widget
+            - method: clearValue
+            - pluginId: my_withu_logo
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: submit
+            - type: widget
+            - method: clearValue
+            - pluginId: image_background
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - hideSubmit: false
+    - loading: '{{update_mywithu.isFetching}}'
+    - overflowType: hidden
+    - disabled: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    height: 10.4
+    width: 12
+    tabNum: 4
+createdAt: 2021-08-18T11:28:25.369Z

@@ -1,0 +1,35 @@
+id: free_info
+type: widget
+subtype: AlertWidget
+template:
+  ordered:
+    - valueToCopy: ''
+    - internalUrlHashParams: ''
+    - hidden: '{{deal_type_picker.value != 1}}'
+    - exportFileType: csv
+    - buttonType: action
+    - url: ''
+    - newWindow: false
+    - exportQuery: ''
+    - action: ''
+    - internalUrlQuery: ''
+    - internalUrlPath: ''
+    - title: Warning
+    - type: warning
+    - exportFileName: ''
+    - description: >-
+        This method is the only offer type that will apply a deal within the
+        WithU mobile app as well as within MyWithU. Please note that links sent
+        to the app with this method run a significant risk of not surviving
+        initial install, and may require users to re-click on the links. Payment
+        for this option will allways be taken in app.
+    - buttonText: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: web_offer
+    row: 0.7999999999999998
+    height: 3
+    width: 12
+createdAt: 2021-09-25T15:47:38.126Z

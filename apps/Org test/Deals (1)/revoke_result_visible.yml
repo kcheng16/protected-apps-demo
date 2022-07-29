@@ -1,0 +1,8 @@
+id: revoke_result_visible
+type: state
+subtype: State
+template:
+  ordered:
+    - value: 'false'
+createdAt: 2021-12-22T12:06:51.360Z
+folder: Temporary state

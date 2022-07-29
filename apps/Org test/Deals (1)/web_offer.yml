@@ -1,0 +1,21 @@
+id: web_offer
+type: widget
+subtype: ContainerWidget
+template:
+  ordered:
+    - title: ''
+    - disabled: ''
+    - spinWhenChildrenAreFetching: true
+    - showBorder: true
+    - showDropShadow: true
+    - heightType: fixed
+    - overflowType: hidden
+    - hidden: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: offer_setup_form
+    height: 9.600000000000001
+    width: 12
+createdAt: 2021-09-16T10:43:20.208Z

@@ -1,0 +1,114 @@
+id: load_dpa_template
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: '{{check_dpa_state.value != 1}}'
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearValue
+            - pluginId: legal_entity_name
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: close
+            - type: datasource
+            - method: trigger
+            - pluginId: company_list
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearValue
+            - pluginId: legal_address
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: close
+            - type: widget
+            - method: reset
+            - pluginId: dpa_wizard
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearValue
+            - pluginId: company_name
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearValue
+            - pluginId: company_geo
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearValue
+            - pluginId: company_address_no_uk
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+            - eventParams:
+                ordered:
+                  - onlyRespondToUserInteraction: true
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: '{{check_dpa_state.value != 1}}'
+    - buttonText: Generate DPA
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 10.400000000000002
+    col: 8
+    height: 1
+    width: 4
+    tabNum: 8
+createdAt: 2021-09-13T14:49:22.744Z

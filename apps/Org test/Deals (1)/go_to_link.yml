@@ -1,0 +1,42 @@
+id: go_to_link
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: ''
+    - hidden: false
+    - text: Go to link
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - params:
+                ordered:
+                  - url: '{{current_deal_links.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: '{{current_deal_links.value == null}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 8.4
+    col: 2
+    height: 1
+    width: 2
+    tabNum: 2
+createdAt: 2021-09-21T17:10:34.909Z

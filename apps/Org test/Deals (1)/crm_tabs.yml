@@ -1,0 +1,25 @@
+id: crm_tabs
+type: widget
+subtype: TabbedContainerWidget
+template:
+  ordered:
+    - heightType: auto
+    - spinWhenChildrenAreFetching: true
+    - unmountInactiveTabs: false
+    - tabNames: '["CRM Options"]'
+    - selectedTabIndex: 0
+    - selectedTab: '"0"'
+    - showTabBar: true
+    - disableAnimation: false
+    - overflowType: hidden
+    - disabled: '{{crm_sync_status.value}}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: edit_deal_container
+    row: 2
+    height: 10.4
+    width: 12
+    tabNum: 7
+createdAt: 2021-09-13T21:25:35.593Z

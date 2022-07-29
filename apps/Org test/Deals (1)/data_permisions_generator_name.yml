@@ -1,0 +1,14 @@
+id: data_permisions_generator_name
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        if ({{name_dpa_auto.value === true}}) {
+          return "Name data including users first and last name";
+        } 
+        else  {return ""
+              }
+    - value: ''
+createdAt: 2021-11-07T06:59:10.466Z
+folder: Data_Sharing

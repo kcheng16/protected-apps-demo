@@ -1,0 +1,91 @@
+id: edit_branch_link
+type: datasource
+subtype: RESTQuery
+resourceName: b9db7e42-1588-43d4-8930-eb77420dffb6
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: >-
+        [{"key":"data","value":"{{data_payload}}"},{"key":"campaign","value":"{{campaign}}"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: url?url={{branch_url}}
+    - playgroundQueryUuid: 605dbb41-1ac8-40c1-924f-53a939039f39
+    - playgroundQueryId: 4
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - retoolVersion: 2.78.12
+    - importedQueryInputs:
+        ordered:
+          - data_payload: "{\n   \"$og_title\":\"{{marketing_name.value || \"Download the WithU App now\"}}\",\n   \"$og_description\":\"{{url_description.value || \"A fitness app like no other. Bringing audio-led personal training to your workouts.\"}}\",\n   \"$og_image_url\":\"{{image_check.value}}\",\n   \"$desktop_url\":\"{{link_destination_desktop.value}}\",\n   \"channel\": \"{{link_channel.value}}\",\n    \"feature\": \"{{link_medium.value}}\",\n    \"$android_url\":\"{{link_destination_android_edit.value}}\",\n  \t\"$ios_url\":\"{{link_destination_ios_edit.value}}\",\n   \"$marketing_title\":\"{{link_title.value || link_name.value}}\",\n   \"$web_only\":{{my_withu_toggle.value ?? false}},\n\toffering:\"{{offering_generator.value}}\",\n  enforce_code_entry:{{my_withu_branded_code_redemption.value ?? false}},\n  \tpersisted_offering:\"{{persisted_offering_generator.value}}\",\n   \"nav_to\":\"{{nav_to_generator.value}}\"\n}"
+          - campaign: '{{link_campaign.value}}'
+          - branch_url: '{{current_deal_links.value}}'
+    - isImported: true
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - cookies: ''
+    - metadata: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: true
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: update_link_firestore
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: PUT
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2021-09-21T17:40:08.605Z
+folder: Links
