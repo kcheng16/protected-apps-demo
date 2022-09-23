@@ -24,7 +24,11 @@ template:
         ordered: []
     - alwaysShowPaginator: false
     - columnColors:
-        ordered: []
+        ordered:
+          - id: ''
+          - name: ''
+          - email: ''
+          - sales: ''
     - columnFrozenAlignments:
         ordered: []
     - allowMultiRowSelect: false
@@ -168,7 +172,7 @@ style:
   ordered: []
 position2:
   position2:
-    row: 3
+    row: 1.2
     col: 3
     height: 8
     width: 8
