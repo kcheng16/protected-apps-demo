@@ -14,7 +14,7 @@ template:
     - disabled: ''
 position2:
   position2:
-    height: 12
+    height: 13
     width: 12
 mobilePosition2:
   position2:
