@@ -1,0 +1,7 @@
+id: $customDocumentTitle
+type: setting
+subtype: DocumentTitle
+template:
+  ordered:
+    - value: '{{current_user.firstName}} dashboard'
+createdAt: 2022-07-26T00:23:30.464Z

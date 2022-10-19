@@ -1,0 +1,8 @@
+version: 43.0.9
+pageUuid: eada3c7a-f65d-11ec-a1c4-97f84e966c20
+appTemplate:
+  inAppRetoolPillAppearance: HIDE_RETOOL_BRANDING
+  rootScreen: null
+  customDocumentTitleEnabled: true
+  version: 2.98.4
+  markdownLinkBehavior: auto
